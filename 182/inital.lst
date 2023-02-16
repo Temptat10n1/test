@@ -1,0 +1,677 @@
+gpasm-1.5.0 #1284 (Nov  8 2021)    inital.asm   02/25/22  18:07:22          PAGE  1
+
+
+LOC    OBJECT CODE    LINE  SOURCE TEXT
+  VALUE
+
+                      00001 ;--------------------------------------------------------
+                      00002 ; File Created by SDCC : free open source ANSI-C Compiler
+                      00003 ; Version 3.6.0 #9615 (CYGWIN)
+                      00004 ;--------------------------------------------------------
+                      00005 ; PIC port for the 14-bit core
+                      00006 ;--------------------------------------------------------
+                      00007 ;       .file   "inital.c"
+                      00008         list    p=18p110l
+                      00009         radix dec
+                      00010         include "p18p110l.inc"
+                      00001        LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Jun 02 2017
+                      00005 ;  HCIDE HC18P235L processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 2012-2017 Holychip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00442         LIST
+                      00011 ;--------------------------------------------------------
+                      00012 ; external declarations
+                      00013 ;--------------------------------------------------------
+  0000                00014         extern  _STATUSbits
+  0000                00015         extern  _PORTAbits
+  0000                00016         extern  _PORTBbits
+  0000                00017         extern  _INTCONbits
+  0000                00018         extern  _PIR1bits
+  0000                00019         extern  _PIR2bits
+  0000                00020         extern  _T1CONbits
+  0000                00021         extern  _T2CONbits
+  0000                00022         extern  _WPUBbits
+  0000                00023         extern  _IOCBbits
+  0000                00024         extern  _CCP1CONbits
+  0000                00025         extern  _PR1CONbits
+  0000                00026         extern  _CCP2CONbits
+  0000                00027         extern  _ADCON0bits
+  0000                00028         extern  _OPTIONbits
+  0000                00029         extern  _TRISAbits
+  0000                00030         extern  _TRISBbits
+  0000                00031         extern  _ADCKCSbits
+  0000                00032         extern  _PIE1bits
+  0000                00033         extern  _PIE2bits
+  0000                00034         extern  _PCONbits
+  0000                00035         extern  _T1GCONbits
+  0000                00036         extern  _OSCCONbits
+  0000                00037         extern  _WPUAbits
+  0000                00038         extern  _PMCONbits
+  0000                00039         extern  _ANSELbits
+  0000                00040         extern  _ADCON1bits
+  0000                00041         extern  _INDF
+  0000                00042         extern  _T0
+  0000                00043         extern  _PCL
+gpasm-1.5.0 #1284 (Nov  8 2021)    inital.asm   02/25/22  18:07:22          PAGE  2
+
+
+LOC    OBJECT CODE    LINE  SOURCE TEXT
+  VALUE
+
+  0000                00044         extern  _STATUS
+  0000                00045         extern  _FSR
+  0000                00046         extern  _PORTA
+  0000                00047         extern  _PORTB
+  0000                00048         extern  _PCLATH
+  0000                00049         extern  _INTCON
+  0000                00050         extern  _PIR1
+  0000                00051         extern  _PIR2
+  0000                00052         extern  _T1L
+  0000                00053         extern  _T1H
+  0000                00054         extern  _T1CON
+  0000                00055         extern  _T2
+  0000                00056         extern  _T2CON
+  0000                00057         extern  _WPUB
+  0000                00058         extern  _IOCB
+  0000                00059         extern  _CCPR1L
+  0000                00060         extern  _CCPR1H
+  0000                00061         extern  _CCP1CON
+  0000                00062         extern  _PR1L
+  0000                00063         extern  _PR1CON
+  0000                00064         extern  _CCPR2L
+  0000                00065         extern  _CCPR2H
+  0000                00066         extern  _CCP2CON
+  0000                00067         extern  _ADRESH
+  0000                00068         extern  _ADCON0
+  0000                00069         extern  _OPTION
+  0000                00070         extern  _TRISA
+  0000                00071         extern  _TRISB
+  0000                00072         extern  _ADCKCS
+  0000                00073         extern  _PIE1
+  0000                00074         extern  _PIE2
+  0000                00075         extern  _PCON
+  0000                00076         extern  _T1GCON
+  0000                00077         extern  _OSCCON
+  0000                00078         extern  _PR2
+  0000                00079         extern  _WPUA
+  0000                00080         extern  _PMDATL
+  0000                00081         extern  _PMDATH
+  0000                00082         extern  _PMADRL
+  0000                00083         extern  _PMADRH
+  0000                00084         extern  _PMCON
+  0000                00085         extern  _ANSEL
+  0000                00086         extern  _ADRESL
+  0000                00087         extern  _ADCON1
+                      00088 
+  0000                00089         extern PSAVE
+  0000                00090         extern SSAVE
+  0000                00091         extern WSAVE
+  0000                00092         extern STK12
+  0000                00093         extern STK11
+  0000                00094         extern STK10
+  0000                00095         extern STK09
+  0000                00096         extern STK08
+gpasm-1.5.0 #1284 (Nov  8 2021)    inital.asm   02/25/22  18:07:22          PAGE  3
+
+
+LOC    OBJECT CODE    LINE  SOURCE TEXT
+  VALUE
+
+  0000                00097         extern STK07
+  0000                00098         extern STK06
+  0000                00099         extern STK05
+  0000                00100         extern STK04
+  0000                00101         extern STK03
+  0000                00102         extern STK02
+  0000                00103         extern STK01
+  0000                00104         extern STK00
+                      00105 ;--------------------------------------------------------
+                      00106 ; global declarations
+                      00107 ;--------------------------------------------------------
+  0000                00108         global  _sysinitial
+  0000                00109         global  _inital
+                      00110 
+                      00111 ;--------------------------------------------------------
+                      00112 ; global definitions
+                      00113 ;--------------------------------------------------------
+                      00114 ;--------------------------------------------------------
+                      00115 ; absolute symbol definitions
+                      00116 ;--------------------------------------------------------
+                      00117 ;--------------------------------------------------------
+                      00118 ; compiler-defined variables
+                      00119 ;--------------------------------------------------------
+                      00120 ;--------------------------------------------------------
+                      00121 ; initialized data
+                      00122 ;--------------------------------------------------------
+                      00123 ;--------------------------------------------------------
+                      00124 ; overlayable items in internal ram 
+                      00125 ;--------------------------------------------------------
+                      00126 ;       udata_ovr
+                      00127 ;--------------------------------------------------------
+                      00128 ; code
+                      00129 ;--------------------------------------------------------
+                      00130 code_inital     code
+                      00131 ;***
+                      00132 ;  pBlock Stats: dbName = C
+                      00133 ;***
+                      00134 ;has an exit
+                      00135 ;; Starting pCode block
+                      00136 S_inital__sysinitial    code
+0000                  00137 _sysinitial:
+                      00138 ; 2 exit points
+                      00139 ;       .line   62; "inital.c"  INTCON=0x28;//0010 1000 =  πƒ‹À˘”–Œ¥∆¡±Œµƒ÷–∂œ,1 =  πƒ‹PORTBµÁ∆Ω±‰ªØ÷–∂œ
+                            ,T0IF£∫Timer0,1 = Timer0º∆ ˝ºƒ¥Ê∆˜“Á≥ˆ£®±ÿ–Î”…»Ìº˛«Â0£©PEIE
+0000   0428           00140         MOVLW   0x28
+0001   0???           00141         BANKSEL _INTCON
+0002   19??           00142         MOVWF   _INTCON
+                      00143 ;       .line   64; "inital.c"  OSCCON=0X80;
+0003   0480           00144         MOVLW   0x80
+0004   0???           00145         BANKSEL _OSCCON
+0005   19??           00146         MOVWF   _OSCCON
+                      00147 ;       .line   66; "inital.c"  OPTION=0X88;
+0006   0488           00148         MOVLW   0x88
+gpasm-1.5.0 #1284 (Nov  8 2021)    inital.asm   02/25/22  18:07:22          PAGE  4
+
+
+LOC    OBJECT CODE    LINE  SOURCE TEXT
+  VALUE
+
+0007   19??           00149         MOVWF   _OPTION
+                      00150 ;       .line   67; "inital.c"  PCON=0XD0;
+0008   04D0           00151         MOVLW   0xd0
+0009   19??           00152         MOVWF   _PCON
+                      00153 ;       .line   70; "inital.c"  PEIE=1;// πƒ‹À˘”–Œ¥∆¡±ŒµƒÕ‚…Ë÷–∂œ
+000A   0???           00154         BANKSEL _INTCONbits
+000B   3B??           00155         BSF     _INTCONbits,6
+                      00156 ;       .line   71; "inital.c"  T0IE=1;
+000C   3A??           00157         BSF     _INTCONbits,5
+                      00158 ;       .line   73; "inital.c"  PIE1=2;                 //¥Úø™T2÷–∂œ
+000D   0402           00159         MOVLW   0x02
+000E   0???           00160         BANKSEL _PIE1
+000F   19??           00161         MOVWF   _PIE1
+                      00162 ;       .line   74; "inital.c"  T2CON=0b00110100;       //…Ë÷√T2∑÷∆µ1:64
+0010   0434           00163         MOVLW   0x34
+0011   0???           00164         BANKSEL _T2CON
+0012   19??           00165         MOVWF   _T2CON
+                      00166 ;       .line   75; "inital.c"  PR2=124;                //0.25*64*(PR+1)=4MSΩ¯“ª¥ŒT2÷–∂œ
+0013   047C           00167         MOVLW   0x7c
+0014   0???           00168         BANKSEL _PR2
+0015   19??           00169         MOVWF   _PR2
+0016   0002           00170         RETURN  
+                      00171 ; exit point of _sysinitial
+                      00172 
+                      00173 ;***
+                      00174 ;  pBlock Stats: dbName = C
+                      00175 ;***
+                      00176 ;has an exit
+                      00177 ;; Starting pCode block
+                      00178 S_inital__inital        code
+0000                  00179 _inital:
+                      00180 ; 2 exit points
+                      00181 ;       .line   13; "inital.c"  TRISA=0b11101110;                       //1110 1110  ‰»Î ‰≥ˆ…Ë÷√  1= ‰»Î
+                            £¨0= ‰≥ˆ
+0000   04EE           00182         MOVLW   0xee
+0001   0???           00183         BANKSEL _TRISA
+0002   19??           00184         MOVWF   _TRISA
+                      00185 ;       .line   14; "inital.c"  TRISB=0b10111110;                       //1011 1110  ‰»Î ‰≥ˆ…Ë÷√  1= ‰»Î
+                            £¨0= ‰≥ˆ
+0003   04BE           00186         MOVLW   0xbe
+0004   19??           00187         MOVWF   _TRISB
+                      00188 ;       .line   15; "inital.c"  PORTA=0b00010000;                       //0001 0001
+0005   0410           00189         MOVLW   0x10
+0006   0???           00190         BANKSEL _PORTA
+0007   19??           00191         MOVWF   _PORTA
+                      00192 ;       .line   16; "inital.c"  PORTB=0b01000000;                       //0110 0000 PORTø⁄ ‰≥ˆ∏ﬂµÕµÁ∆Ω…Ë
+                            ÷√  1=∏ﬂµÁ∆Ω£¨0=µÕµÁ∆Ω
+0008   0440           00193         MOVLW   0x40
+0009   19??           00194         MOVWF   _PORTB
+                      00195 ;       .line   18; "inital.c"  ANSEL=0X00;
+000A   0???           00196         BANKSEL _ANSEL
+000B   18??           00197         CLRF    _ANSEL
+                      00198 ;       .line   19; "inital.c"  WPUA =0Xff;                     //1110 1110…œ¿≠…Ë÷√ 1=DISABLED PULL-UP  
+gpasm-1.5.0 #1284 (Nov  8 2021)    inital.asm   02/25/22  18:07:22          PAGE  5
+
+
+LOC    OBJECT CODE    LINE  SOURCE TEXT
+  VALUE
+
+                            ;0=PULL-UP
+000C   04FF           00199         MOVLW   0xff
+000D   19??           00200         MOVWF   _WPUA
+                      00201 ;       .line   20; "inital.c"  WPUB =0b11011111;                       //1001 1110…œ¿≠…Ë÷√ 1=DISABLED P
+                            ULL-UP  ;0=PULL-UP
+000E   04DF           00202         MOVLW   0xdf
+000F   0???           00203         BANKSEL _WPUB
+0010   19??           00204         MOVWF   _WPUB
+                      00205 ;       .line   22; "inital.c"  IOCB =0X28;            //0010 1000 PORTBµÁ∆Ω±‰ªØ÷–∂œ,0 = ∏√∂Àø⁄Ω˚÷πµÁ∆Ω±
+                            ‰ªØ÷–∂œ,1 = ∏√∂Àø⁄ πƒ‹µÁ∆Ω±‰ªØ÷–∂œ
+0011   0428           00206         MOVLW   0x28
+0012   19??           00207         MOVWF   _IOCB
+                      00208 ;       .line   23; "inital.c"  ADCON0=61;                      //ƒ⁄≤øVdd£¨AN0
+0013   043D           00209         MOVLW   0x3d
+0014   19??           00210         MOVWF   _ADCON0
+                      00211 ;       .line   24; "inital.c"  ADCON1=50;
+0015   0432           00212         MOVLW   0x32
+0016   0???           00213         BANKSEL _ADCON1
+0017   19??           00214         MOVWF   _ADCON1
+0018   0002           00215         RETURN  
+                      00216 ; exit point of _inital
+                      00217 
+                      00218 
+                      00219 ;       code size estimation:
+                      00220 ;          37+   11 =    48 instructions (  118 byte)
+                      00221 
+                      00222         end
+gpasm-1.5.0 #1284 (Nov  8 2021)    inital.asm   02/25/22  18:07:22          PAGE  6
+
+
+SYMBOL TABLE
+  LABEL                              TYPE        VALUE         VALUE          VALUE
+                                                 (hex)         (dec)          (text)
+
+ADCKCS                            CONSTANT      00000087            135
+ADCKCS0                           CONSTANT      00000000              0
+ADCKCS1                           CONSTANT      00000001              1
+ADCKCS2                           CONSTANT      00000002              2
+ADCON0                            CONSTANT      0000001F             31
+ADCON1                            CONSTANT      0000009F            159
+ADCS0                             CONSTANT      00000004              4
+ADCS1                             CONSTANT      00000005              5
+ADCS2                             CONSTANT      00000006              6
+ADEN                              CONSTANT      00000000              0
+ADFM                              CONSTANT      00000007              7
+ADIE                              CONSTANT      00000006              6
+ADIF                              CONSTANT      00000006              6
+ADON                              CONSTANT      00000001              1
+ADREF                             CONSTANT      00000000              0
+ADRESH                            CONSTANT      0000001E             30
+ADRESL                            CONSTANT      0000009E            158
+ANSEL                             CONSTANT      0000009D            157
+ANSEL0                            CONSTANT      00000000              0
+ANSEL1                            CONSTANT      00000001              1
+ANSEL2                            CONSTANT      00000002              2
+ANSEL3                            CONSTANT      00000003              3
+ANSEL4                            CONSTANT      00000004              4
+ANSEL6                            CONSTANT      00000006              6
+ANSEL7                            CONSTANT      00000007              7
+BOR                               CONSTANT      00000000              0
+C                                 CONSTANT      00000000              0
+CCP1CON                           CONSTANT      00000017             23
+CCP1IE                            CONSTANT      00000002              2
+CCP1IF                            CONSTANT      00000002              2
+CCP1M0                            CONSTANT      00000000              0
+CCP1M1                            CONSTANT      00000001              1
+CCP1M2                            CONSTANT      00000002              2
+CCP1M3                            CONSTANT      00000003              3
+CCP2CON                           CONSTANT      0000001D             29
+CCP2IE                            CONSTANT      00000000              0
+CCP2IF                            CONSTANT      00000000              0
+CCP2M0                            CONSTANT      00000000              0
+CCP2M1                            CONSTANT      00000001              1
+CCP2M2                            CONSTANT      00000002              2
+CCP2M3                            CONSTANT      00000003              3
+CCPR1H                            CONSTANT      00000016             22
+CCPR1L                            CONSTANT      00000015             21
+CCPR2H                            CONSTANT      0000001C             28
+CCPR2L                            CONSTANT      0000001B             27
+CHS0                              CONSTANT      00000002              2
+CHS1                              CONSTANT      00000003              3
+CHS2                              CONSTANT      00000004              4
+DC                                CONSTANT      00000001              1
+DC1B0                             CONSTANT      00000004              4
+DC1B1                             CONSTANT      00000005              5
+DC2B0                             CONSTANT      00000004              4
+gpasm-1.5.0 #1284 (Nov  8 2021)    inital.asm   02/25/22  18:07:22          PAGE  7
+
+
+SYMBOL TABLE
+  LABEL                              TYPE        VALUE         VALUE          VALUE
+                                                 (hex)         (dec)          (text)
+
+DC2B1                             CONSTANT      00000005              5
+F                                 CONSTANT      00000001              1
+FSR                               CONSTANT      00000004              4
+GIE                               CONSTANT      00000007              7
+HXEN                              CONSTANT      00000001              1
+INDF                              CONSTANT      00000000              0
+INTCON                            CONSTANT      0000000B             11
+INTE                              CONSTANT      00000004              4
+INTEDG                            CONSTANT      00000006              6
+INTF                              CONSTANT      00000001              1
+IOCB                              CONSTANT      00000014             20
+IOCB0                             CONSTANT      00000000              0
+IOCB1                             CONSTANT      00000001              1
+IOCB2                             CONSTANT      00000002              2
+IOCB3                             CONSTANT      00000003              3
+IOCB5                             CONSTANT      00000005              5
+IOCB6                             CONSTANT      00000006              6
+IOCB7                             CONSTANT      00000007              7
+IRP                               CONSTANT      00000007              7
+LVD1EN                            CONSTANT      00000006              6
+LVD1F                             CONSTANT      00000002              2
+LVD2EN                            CONSTANT      00000007              7
+LVD2F                             CONSTANT      00000003              3
+OPTION                            CONSTANT      00000081            129
+OSCCON                            CONSTANT      00000090            144
+PCL                               CONSTANT      00000002              2
+PCLATH                            CONSTANT      0000000A             10
+PCON                              CONSTANT      0000008E            142
+PD                                CONSTANT      00000003              3
+PEIE                              CONSTANT      00000006              6
+PIE1                              CONSTANT      0000008C            140
+PIE2                              CONSTANT      0000008D            141
+PIR1                              CONSTANT      0000000C             12
+PIR2                              CONSTANT      0000000D             13
+PMADRH                            CONSTANT      00000097            151
+PMADRL                            CONSTANT      00000096            150
+PMCON                             CONSTANT      00000098            152
+PMDATH                            CONSTANT      00000095            149
+PMDATL                            CONSTANT      00000094            148
+POR                               CONSTANT      00000001              1
+PORTA                             CONSTANT      00000005              5
+PORTA0                            CONSTANT      00000000              0
+PORTA1                            CONSTANT      00000001              1
+PORTA2                            CONSTANT      00000002              2
+PORTA3                            CONSTANT      00000003              3
+PORTA4                            CONSTANT      00000004              4
+PORTA5                            CONSTANT      00000005              5
+PORTA6                            CONSTANT      00000006              6
+PORTA7                            CONSTANT      00000007              7
+PORTB                             CONSTANT      00000006              6
+PORTB0                            CONSTANT      00000000              0
+PORTB1                            CONSTANT      00000001              1
+gpasm-1.5.0 #1284 (Nov  8 2021)    inital.asm   02/25/22  18:07:22          PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                              TYPE        VALUE         VALUE          VALUE
+                                                 (hex)         (dec)          (text)
+
+PORTB2                            CONSTANT      00000002              2
+PORTB3                            CONSTANT      00000003              3
+PORTB4                            CONSTANT      00000004              4
+PORTB5                            CONSTANT      00000005              5
+PORTB6                            CONSTANT      00000006              6
+PORTB7                            CONSTANT      00000007              7
+PR1CON                            CONSTANT      00000019             25
+PR1EN                             CONSTANT      00000000              0
+PR1L                              CONSTANT      00000018             24
+PR2                               CONSTANT      00000092            146
+PS0                               CONSTANT      00000000              0
+PS1                               CONSTANT      00000001              1
+PS2                               CONSTANT      00000002              2
+PSA                               CONSTANT      00000003              3
+PSAVE                             EXTERNAL      00000000              0
+PWM1T0                            CONSTANT      00000006              6
+PWM1T1                            CONSTANT      00000007              7
+PWM2T0                            CONSTANT      00000004              4
+PWM2T1                            CONSTANT      00000005              5
+PWMPR1                            CONSTANT      00000001              1
+RBIE                              CONSTANT      00000003              3
+RBIF                              CONSTANT      00000000              0
+RBPUB                             CONSTANT      00000007              7
+RDON                              CONSTANT      00000000              0
+RP0                               CONSTANT      00000005              5
+RP1                               CONSTANT      00000006              6
+SCS                               CONSTANT      00000000              0
+SSAVE                             EXTERNAL      00000000              0
+STATUS                            CONSTANT      00000003              3
+STK00                             EXTERNAL      00000000              0
+STK01                             EXTERNAL      00000000              0
+STK02                             EXTERNAL      00000000              0
+STK03                             EXTERNAL      00000000              0
+STK04                             EXTERNAL      00000000              0
+STK05                             EXTERNAL      00000000              0
+STK06                             EXTERNAL      00000000              0
+STK07                             EXTERNAL      00000000              0
+STK08                             EXTERNAL      00000000              0
+STK09                             EXTERNAL      00000000              0
+STK10                             EXTERNAL      00000000              0
+STK11                             EXTERNAL      00000000              0
+STK12                             EXTERNAL      00000000              0
+T0                                CONSTANT      00000001              1
+T0CS                              CONSTANT      00000005              5
+T0IE                              CONSTANT      00000005              5
+T0IF                              CONSTANT      00000002              2
+T0OSCEN                           CONSTANT      00000007              7
+T0SE                              CONSTANT      00000004              4
+T1CKPS0                           CONSTANT      00000004              4
+T1CKPS1                           CONSTANT      00000005              5
+T1CKPS2                           CONSTANT      00000002              2
+T1CKPS3                           CONSTANT      00000003              3
+gpasm-1.5.0 #1284 (Nov  8 2021)    inital.asm   02/25/22  18:07:22          PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                              TYPE        VALUE         VALUE          VALUE
+                                                 (hex)         (dec)          (text)
+
+T1CON                             CONSTANT      00000010             16
+T1CS0                             CONSTANT      00000006              6
+T1CS1                             CONSTANT      00000007              7
+T1GCON                            CONSTANT      0000008F            143
+T1GEN                             CONSTANT      00000007              7
+T1GIE                             CONSTANT      00000007              7
+T1GIF                             CONSTANT      00000007              7
+T1GON                             CONSTANT      00000003              3
+T1GPOL                            CONSTANT      00000006              6
+T1GSPM                            CONSTANT      00000004              4
+T1GSS0                            CONSTANT      00000000              0
+T1GSS1                            CONSTANT      00000001              1
+T1GTM                             CONSTANT      00000005              5
+T1GVAL                            CONSTANT      00000002              2
+T1H                               CONSTANT      0000000F             15
+T1IE                              CONSTANT      00000000              0
+T1IF                              CONSTANT      00000000              0
+T1L                               CONSTANT      0000000E             14
+T1ON                              CONSTANT      00000000              0
+T1OSCEN                           CONSTANT      00000003              3
+T1SYNC                            CONSTANT      00000002              2
+T2                                CONSTANT      00000011             17
+T2CKPS0                           CONSTANT      00000003              3
+T2CKPS1                           CONSTANT      00000004              4
+T2CKPS2                           CONSTANT      00000005              5
+T2CKPS3                           CONSTANT      00000006              6
+T2CON                             CONSTANT      00000012             18
+T2IE                              CONSTANT      00000001              1
+T2IF                              CONSTANT      00000001              1
+T2ON                              CONSTANT      00000002              2
+TO                                CONSTANT      00000004              4
+TRISA                             CONSTANT      00000085            133
+TRISA0                            CONSTANT      00000000              0
+TRISA1                            CONSTANT      00000001              1
+TRISA2                            CONSTANT      00000002              2
+TRISA3                            CONSTANT      00000003              3
+TRISA4                            CONSTANT      00000004              4
+TRISA5                            CONSTANT      00000005              5
+TRISA6                            CONSTANT      00000006              6
+TRISA7                            CONSTANT      00000007              7
+TRISB                             CONSTANT      00000086            134
+TRISB0                            CONSTANT      00000000              0
+TRISB1                            CONSTANT      00000001              1
+TRISB2                            CONSTANT      00000002              2
+TRISB3                            CONSTANT      00000003              3
+TRISB4                            CONSTANT      00000004              4
+TRISB5                            CONSTANT      00000005              5
+TRISB6                            CONSTANT      00000006              6
+TRISB7                            CONSTANT      00000007              7
+VHS0                              CONSTANT      00000005              5
+VHS1                              CONSTANT      00000006              6
+W                                 CONSTANT      00000000              0
+gpasm-1.5.0 #1284 (Nov  8 2021)    inital.asm   02/25/22  18:07:22          PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                              TYPE        VALUE         VALUE          VALUE
+                                                 (hex)         (dec)          (text)
+
+WDTENS                            CONSTANT      00000004              4
+WPUA                              CONSTANT      00000093            147
+WPUA0                             CONSTANT      00000000              0
+WPUA1                             CONSTANT      00000001              1
+WPUA2                             CONSTANT      00000002              2
+WPUA3                             CONSTANT      00000003              3
+WPUA4                             CONSTANT      00000004              4
+WPUA6                             CONSTANT      00000006              6
+WPUA7                             CONSTANT      00000007              7
+WPUB                              CONSTANT      00000013             19
+WPUB0                             CONSTANT      00000000              0
+WPUB1                             CONSTANT      00000001              1
+WPUB2                             CONSTANT      00000002              2
+WPUB3                             CONSTANT      00000003              3
+WPUB6                             CONSTANT      00000006              6
+WPUB7                             CONSTANT      00000007              7
+WSAVE                             EXTERNAL      00000000              0
+Z                                 CONSTANT      00000002              2
+_ADCKCS                           EXTERNAL      00000000              0
+_ADCKCSbits                       EXTERNAL      00000000              0
+_ADCON0                           EXTERNAL      00000000              0
+_ADCON0bits                       EXTERNAL      00000000              0
+_ADCON1                           EXTERNAL      00000000              0
+_ADCON1bits                       EXTERNAL      00000000              0
+_ADRESH                           EXTERNAL      00000000              0
+_ADRESL                           EXTERNAL      00000000              0
+_ANSEL                            EXTERNAL      00000000              0
+_ANSELbits                        EXTERNAL      00000000              0
+_CCP1CON                          EXTERNAL      00000000              0
+_CCP1CONbits                      EXTERNAL      00000000              0
+_CCP2CON                          EXTERNAL      00000000              0
+_CCP2CONbits                      EXTERNAL      00000000              0
+_CCPR1H                           EXTERNAL      00000000              0
+_CCPR1L                           EXTERNAL      00000000              0
+_CCPR2H                           EXTERNAL      00000000              0
+_CCPR2L                           EXTERNAL      00000000              0
+_CONFIG                           CONSTANT      00002000           8192
+_CP_OFF                           CONSTANT      00003FFF          16383
+_CP_ON                            CONSTANT      00003FEF          16367
+_FOSC_HS                          CONSTANT      00003FFD          16381
+_FOSC_INTRCIO                     CONSTANT      00003FFC          16380
+_FOSC_LP                          CONSTANT      00003CFF          15615
+_FOSC_XT                          CONSTANT      00003DFF          15871
+_FSR                              EXTERNAL      00000000              0
+_HS_OSC                           CONSTANT      00003FFD          16381
+_INDF                             EXTERNAL      00000000              0
+_INTCON                           EXTERNAL      00000000              0
+_INTCONbits                       EXTERNAL      00000000              0
+_INTOSCIO                         CONSTANT      00003FFC          16380
+_INTRC_OSC_NOCLKOUT               CONSTANT      00003FFC          16380
+_IOCB                             EXTERNAL      00000000              0
+_IOCBbits                         EXTERNAL      00000000              0
+gpasm-1.5.0 #1284 (Nov  8 2021)    inital.asm   02/25/22  18:07:22          PAGE 11
+
+
+SYMBOL TABLE
+  LABEL                              TYPE        VALUE         VALUE          VALUE
+                                                 (hex)         (dec)          (text)
+
+_LP_OSC                           CONSTANT      00003CFF          15615
+_OPTION                           EXTERNAL      00000000              0
+_OPTIONbits                       EXTERNAL      00000000              0
+_OSCCON                           EXTERNAL      00000000              0
+_OSCCONbits                       EXTERNAL      00000000              0
+_PCL                              EXTERNAL      00000000              0
+_PCLATH                           EXTERNAL      00000000              0
+_PCON                             EXTERNAL      00000000              0
+_PCONbits                         EXTERNAL      00000000              0
+_PIE1                             EXTERNAL      00000000              0
+_PIE1bits                         EXTERNAL      00000000              0
+_PIE2                             EXTERNAL      00000000              0
+_PIE2bits                         EXTERNAL      00000000              0
+_PIR1                             EXTERNAL      00000000              0
+_PIR1bits                         EXTERNAL      00000000              0
+_PIR2                             EXTERNAL      00000000              0
+_PIR2bits                         EXTERNAL      00000000              0
+_PMADRH                           EXTERNAL      00000000              0
+_PMADRL                           EXTERNAL      00000000              0
+_PMCON                            EXTERNAL      00000000              0
+_PMCONbits                        EXTERNAL      00000000              0
+_PMDATH                           EXTERNAL      00000000              0
+_PMDATL                           EXTERNAL      00000000              0
+_PORTA                            EXTERNAL      00000000              0
+_PORTAbits                        EXTERNAL      00000000              0
+_PORTB                            EXTERNAL      00000000              0
+_PORTBbits                        EXTERNAL      00000000              0
+_PR1CON                           EXTERNAL      00000000              0
+_PR1CONbits                       EXTERNAL      00000000              0
+_PR1L                             EXTERNAL      00000000              0
+_PR2                              EXTERNAL      00000000              0
+_STATUS                           EXTERNAL      00000000              0
+_STATUSbits                       EXTERNAL      00000000              0
+_T0                               EXTERNAL      00000000              0
+_T1CON                            EXTERNAL      00000000              0
+_T1CONbits                        EXTERNAL      00000000              0
+_T1GCON                           EXTERNAL      00000000              0
+_T1GCONbits                       EXTERNAL      00000000              0
+_T1H                              EXTERNAL      00000000              0
+_T1L                              EXTERNAL      00000000              0
+_T2                               EXTERNAL      00000000              0
+_T2CON                            EXTERNAL      00000000              0
+_T2CONbits                        EXTERNAL      00000000              0
+_TRISA                            EXTERNAL      00000000              0
+_TRISAbits                        EXTERNAL      00000000              0
+_TRISB                            EXTERNAL      00000000              0
+_TRISBbits                        EXTERNAL      00000000              0
+_WDTE_OFF                         CONSTANT      00003FFB          16379
+_WDTE_ON                          CONSTANT      00003FFF          16383
+_WDT_OFF                          CONSTANT      00003FFB          16379
+_WDT_ON                           CONSTANT      00003FFF          16383
+_WPUA                             EXTERNAL      00000000              0
+gpasm-1.5.0 #1284 (Nov  8 2021)    inital.asm   02/25/22  18:07:22          PAGE 12
+
+
+SYMBOL TABLE
+  LABEL                              TYPE        VALUE         VALUE          VALUE
+                                                 (hex)         (dec)          (text)
+
+_WPUAbits                         EXTERNAL      00000000              0
+_WPUB                             EXTERNAL      00000000              0
+_WPUBbits                         EXTERNAL      00000000              0
+_XT_OSC                           CONSTANT      00003DFF          15871
+__14_BIT                          CONSTANT      00000001              1
+__18P110L                         CONSTANT      00000001              1
+__ACTIVE_BANK_ADDR                VARIABLE      FFFFFFFF             -1
+__ACTIVE_PAGE_ADDR                VARIABLE      FFFFFFFF             -1
+__ASSUMED_BANK_ADDR               VARIABLE      FFFFFFFF             -1
+__BANK_0                          CONSTANT      00000000              0
+__BANK_1                          CONSTANT      00000080            128
+__BANK_BITS                       CONSTANT      00000080            128
+__BANK_FIRST                      CONSTANT      00000000              0
+__BANK_INV                        CONSTANT      FFFFFFFF             -1
+__BANK_LAST                       CONSTANT      00000080            128
+__BANK_MASK                       CONSTANT      0000007F            127
+__BANK_SHIFT                      CONSTANT      00000007              7
+__BANK_SIZE                       CONSTANT      00000080            128
+__CODE_END                        CONSTANT      000003FF           1023
+__CODE_START                      CONSTANT      00000000              0
+__COMMON_RAM_END                  CONSTANT      0000007F            127
+__COMMON_RAM_START                CONSTANT      00000040             64
+__CONFIG_END                      CONSTANT      00002001           8193
+__CONFIG_START                    CONSTANT      00002000           8192
+__GPUTILS_SVN_VERSION             CONSTANT      00000504           1284
+__GPUTILS_VERSION_MAJOR           CONSTANT      00000001              1
+__GPUTILS_VERSION_MICRO           CONSTANT      00000000              0
+__GPUTILS_VERSION_MINOR           CONSTANT      00000005              5
+__IDLOCS_END                      CONSTANT      00002005           8197
+__IDLOCS_START                    CONSTANT      00002004           8196
+__NUM_BANKS                       CONSTANT      00000002              2
+__PAGE_BITS                       CONSTANT      00001800           6144
+__PAGE_INV                        CONSTANT      FFFFFFFF             -1
+__PAGE_MASK                       CONSTANT      00000000              0
+__PAGE_SHIFT                      CONSTANT      0000000B             11
+__PAGE_SIZE                       CONSTANT      00000000              0
+__VECTOR_INT                      CONSTANT      00000004              4
+__VECTOR_RESET                    CONSTANT      00000000              0
+__WHILE_LOOP_COUNT_MAX            CONSTANT      000000FF            255
+_inital                           GLOBAL        00000000              0
+_sysinitial                       GLOBAL        00000000              0
+
+Errors   :     0
+Warnings :     0 reported,     0 suppressed
+Messages :     0 reported,     0 suppressed
+
+

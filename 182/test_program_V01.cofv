@@ -1,0 +1,2638 @@
+COFF File and Optional Headers
+COFF version         0x1240: MICROCHIP_MAGIC_v2
+Processor Type       18p110l
+Time Stamp           Fri Feb 25 18:07:22 2022
+Number of Sections   3
+Number of Symbols    102
+Characteristics      0
+
+Section Header
+Name                    code_inital
+Physical address        0
+Virtual address         0
+Size of Section         0
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x20
+  Executable code.
+
+Section Header
+Name                    S_inital__sysinitial
+Physical address        0
+Virtual address         0
+Size of Section         46
+Number of Relocations   15
+Number of Line Numbers  23
+Flags                   0x20
+  Executable code.
+
+Data
+0000:  0428  movlw   0x28
+0001:  0000  nop
+0002:  1980  movwf   0x00
+0003:  0480  movlw   0x80
+0004:  0000  nop
+0005:  1980  movwf   0x00
+0006:  0488  movlw   0x88
+0007:  1980  movwf   0x00
+0008:  04d0  movlw   0xd0
+0009:  1980  movwf   0x00
+000a:  0000  nop
+000b:  3b00  bsf     0x00, 0x6
+000c:  3a80  bsf     0x00, 0x5
+000d:  0402  movlw   0x02
+000e:  0000  nop
+000f:  1980  movwf   0x00
+0010:  0434  movlw   0x34
+0011:  0000  nop
+0012:  1980  movwf   0x00
+0013:  047c  movlw   0x7c
+0014:  0000  nop
+0015:  1980  movwf   0x00
+0016:  0002  return
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0001      0x00000000            0  0x0006 RELOC_BANKSEL        _INTCON
+0x0002      0x00000000            0  0x000a RELOC_F              _INTCON
+0x0004      0x00000000            0  0x0006 RELOC_BANKSEL        _OSCCON
+0x0005      0x00000000            0  0x000a RELOC_F              _OSCCON
+0x0007      0x00000000            0  0x000a RELOC_F              _OPTION
+0x0009      0x00000000            0  0x000a RELOC_F              _PCON
+0x000a      0x00000000            0  0x0006 RELOC_BANKSEL        _INTCONbits
+0x000b      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x000c      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x000e      0x00000000            0  0x0006 RELOC_BANKSEL        _PIE1
+0x000f      0x00000000            0  0x000a RELOC_F              _PIE1
+0x0011      0x00000000            0  0x0006 RELOC_BANKSEL        _T2CON
+0x0012      0x00000000            0  0x000a RELOC_F              _T2CON
+0x0014      0x00000000            0  0x0006 RELOC_BANKSEL        _PR2
+0x0015      0x00000000            0  0x000a RELOC_F              _PR2
+
+Line Number Table
+Line      Address     Symbol
+140       0x0000      inital.asm
+141       0x0001      inital.asm
+142       0x0002      inital.asm
+144       0x0003      inital.asm
+145       0x0004      inital.asm
+146       0x0005      inital.asm
+148       0x0006      inital.asm
+149       0x0007      inital.asm
+151       0x0008      inital.asm
+152       0x0009      inital.asm
+154       0x000a      inital.asm
+155       0x000b      inital.asm
+157       0x000c      inital.asm
+159       0x000d      inital.asm
+160       0x000e      inital.asm
+161       0x000f      inital.asm
+163       0x0010      inital.asm
+164       0x0011      inital.asm
+165       0x0012      inital.asm
+167       0x0013      inital.asm
+168       0x0014      inital.asm
+169       0x0015      inital.asm
+170       0x0016      inital.asm
+
+Section Header
+Name                    S_inital__inital
+Physical address        0
+Virtual address         0
+Size of Section         50
+Number of Relocations   15
+Number of Line Numbers  25
+Flags                   0x20
+  Executable code.
+
+Data
+0000:  04ee  movlw   0xee
+0001:  0000  nop
+0002:  1980  movwf   0x00
+0003:  04be  movlw   0xbe
+0004:  1980  movwf   0x00
+0005:  0410  movlw   0x10
+0006:  0000  nop
+0007:  1980  movwf   0x00
+0008:  0440  movlw   0x40
+0009:  1980  movwf   0x00
+000a:  0000  nop
+000b:  1880  clrf    0x00
+000c:  04ff  movlw   0xff
+000d:  1980  movwf   0x00
+000e:  04df  movlw   0xdf
+000f:  0000  nop
+0010:  1980  movwf   0x00
+0011:  0428  movlw   0x28
+0012:  1980  movwf   0x00
+0013:  043d  movlw   0x3d
+0014:  1980  movwf   0x00
+0015:  0432  movlw   0x32
+0016:  0000  nop
+0017:  1980  movwf   0x00
+0018:  0002  return
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0001      0x00000000            0  0x0006 RELOC_BANKSEL        _TRISA
+0x0002      0x00000000            0  0x000a RELOC_F              _TRISA
+0x0004      0x00000000            0  0x000a RELOC_F              _TRISB
+0x0006      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTA
+0x0007      0x00000000            0  0x000a RELOC_F              _PORTA
+0x0009      0x00000000            0  0x000a RELOC_F              _PORTB
+0x000a      0x00000000            0  0x0006 RELOC_BANKSEL        _ANSEL
+0x000b      0x00000000            0  0x000a RELOC_F              _ANSEL
+0x000d      0x00000000            0  0x000a RELOC_F              _WPUA
+0x000f      0x00000000            0  0x0006 RELOC_BANKSEL        _WPUB
+0x0010      0x00000000            0  0x000a RELOC_F              _WPUB
+0x0012      0x00000000            0  0x000a RELOC_F              _IOCB
+0x0014      0x00000000            0  0x000a RELOC_F              _ADCON0
+0x0016      0x00000000            0  0x0006 RELOC_BANKSEL        _ADCON1
+0x0017      0x00000000            0  0x000a RELOC_F              _ADCON1
+
+Line Number Table
+Line      Address     Symbol
+182       0x0000      inital.asm
+183       0x0001      inital.asm
+184       0x0002      inital.asm
+186       0x0003      inital.asm
+187       0x0004      inital.asm
+189       0x0005      inital.asm
+190       0x0006      inital.asm
+191       0x0007      inital.asm
+193       0x0008      inital.asm
+194       0x0009      inital.asm
+196       0x000a      inital.asm
+197       0x000b      inital.asm
+199       0x000c      inital.asm
+200       0x000d      inital.asm
+202       0x000e      inital.asm
+203       0x000f      inital.asm
+204       0x0010      inital.asm
+206       0x0011      inital.asm
+207       0x0012      inital.asm
+209       0x0013      inital.asm
+210       0x0014      inital.asm
+212       0x0015      inital.asm
+213       0x0016      inital.asm
+214       0x0017      inital.asm
+215       0x0018      inital.asm
+
+Symbol Table
+Idx  Name                     Section          Value      Type     DT           Class     NumAux
+0001 .file                    DEBUG            0x00000000 T_NULL   DT_NON       C_FILE    1
+       file          = inital.asm
+       line included = 0
+       flags         = 0x00000000
+0003 .file                    DEBUG            0x00000000 T_NULL   DT_NON       C_FILE    1
+       file          = /usr/local/share/gputils/header/p18p110l.inc
+       line included = 10
+       flags         = 0x00000000
+0005 .list                    DEBUG            0x00000001 T_NULL   DT_NON       C_LIST    0
+0006 .nolist                  DEBUG            0x0000000a T_NULL   DT_NON       C_LIST    0
+0007 .list                    DEBUG            0x000001ba T_NULL   DT_NON       C_LIST    0
+0008 .eof                     DEBUG            0x00000000 T_NULL   DT_NON       C_EOF     0
+0009 _STATUSbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0010 _PORTAbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0011 _PORTBbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0012 _INTCONbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0013 _PIR1bits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0014 _PIR2bits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0015 _T1CONbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0016 _T2CONbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0017 _WPUBbits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0018 _IOCBbits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0019 _CCP1CONbits             UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0020 _PR1CONbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0021 _CCP2CONbits             UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0022 _ADCON0bits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0023 _OPTIONbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0024 _TRISAbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0025 _TRISBbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0026 _ADCKCSbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0027 _PIE1bits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0028 _PIE2bits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0029 _PCONbits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0030 _T1GCONbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0031 _OSCCONbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0032 _WPUAbits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0033 _PMCONbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0034 _ANSELbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0035 _ADCON1bits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0036 _INDF                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0037 _T0                      UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0038 _PCL                     UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0039 _STATUS                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0040 _FSR                     UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0041 _PORTA                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0042 _PORTB                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0043 _PCLATH                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0044 _INTCON                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0045 _PIR1                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0046 _PIR2                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0047 _T1L                     UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0048 _T1H                     UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0049 _T1CON                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0050 _T2                      UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0051 _T2CON                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0052 _WPUB                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0053 _IOCB                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0054 _CCPR1L                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0055 _CCPR1H                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0056 _CCP1CON                 UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0057 _PR1L                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0058 _PR1CON                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0059 _CCPR2L                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0060 _CCPR2H                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0061 _CCP2CON                 UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0062 _ADRESH                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0063 _ADCON0                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0064 _OPTION                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0065 _TRISA                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0066 _TRISB                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0067 _ADCKCS                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0068 _PIE1                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0069 _PIE2                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0070 _PCON                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0071 _T1GCON                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0072 _OSCCON                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0073 _PR2                     UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0074 _WPUA                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0075 _PMDATL                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0076 _PMDATH                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0077 _PMADRL                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0078 _PMADRH                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0079 _PMCON                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0080 _ANSEL                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0081 _ADRESL                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0082 _ADCON1                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0083 PSAVE                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0084 SSAVE                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0085 WSAVE                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0086 STK12                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0087 STK11                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0088 STK10                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0089 STK09                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0090 STK08                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0091 STK07                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0092 STK06                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0093 STK05                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0094 STK04                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0095 STK03                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0096 STK02                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0097 STK01                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0098 STK00                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0099 code_inital              code_inital      0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 0
+       number of relocations  = 0
+       number of line numbers = 0
+0101 S_inital__sysinitial     S_inital__sysinitial 0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 46
+       number of relocations  = 15
+       number of line numbers = 23
+0103 _sysinitial              S_inital__sysinitial 0x00000000 T_NULL   DT_NON       C_EXT     0
+0104 S_inital__inital         S_inital__inital 0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 50
+       number of relocations  = 15
+       number of line numbers = 25
+0106 _inital                  S_inital__inital 0x00000000 T_NULL   DT_NON       C_EXT     0
+0107 .eof                     DEBUG            0x00000000 T_NULL   DT_NON       C_EOF     0
+
+COFF File and Optional Headers
+COFF version         0x1240: MICROCHIP_MAGIC_v2
+Processor Type       18p110l
+Time Stamp           Fri Feb 25 18:07:22 2022
+Number of Sections   32
+Number of Symbols    211
+Characteristics      0
+
+Section Header
+Name                    sharebank
+Physical address        0x40
+Virtual address         0x40
+Size of Section         16
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_main_0
+Physical address        0
+Virtual address         0
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    UD_main_1
+Physical address        0
+Virtual address         0
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    UD_main_2
+Physical address        0
+Virtual address         0
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    UD_main_3
+Physical address        0
+Virtual address         0
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    UD_main_4
+Physical address        0
+Virtual address         0
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    UD_main_5
+Physical address        0
+Virtual address         0
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    UD_main_6
+Physical address        0
+Virtual address         0
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    UD_main_7
+Physical address        0
+Virtual address         0
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    UD_main_8
+Physical address        0
+Virtual address         0
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    UD_main_9
+Physical address        0
+Virtual address         0
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    UD_main_10
+Physical address        0
+Virtual address         0
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    UD_main_11
+Physical address        0
+Virtual address         0
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    UDL_main_0
+Physical address        0
+Virtual address         0
+Size of Section         10
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    ID_main_0
+Physical address        0
+Virtual address         0
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x40
+  Initialized data.
+
+Data
+0000:  00
+
+Section Header
+Name                    ID_main_1
+Physical address        0
+Virtual address         0
+Size of Section         5
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x40
+  Initialized data.
+
+Data
+0000:  00
+0001:  00
+0002:  10
+0003:  1f
+0004:  10
+
+Section Header
+Name                    ID_main_2
+Physical address        0
+Virtual address         0
+Size of Section         5
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x40
+  Initialized data.
+
+Data
+0000:  00
+0001:  00
+0002:  10
+0003:  1f
+0004:  25
+
+Section Header
+Name                    ID_main_3
+Physical address        0
+Virtual address         0
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x40
+  Initialized data.
+
+Data
+0000:  00
+
+Section Header
+Name                    STARTUP
+Physical address        0
+Virtual address         0
+Size of Section         4
+Number of Relocations   1
+Number of Line Numbers  2
+Flags                   0x1020
+  Executable code.
+  Absolute.
+
+Data
+0000:  0000  nop
+0001:  2000  goto    0x0000
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0001      0x00000000            0  0x0002 RELOC_GOTO           __sdcc_gsinit_startup
+
+Line Number Table
+Line      Address     Symbol
+254       0x0000      main.asm
+255       0x0001      main.asm
+
+Section Header
+Name                    c_interrupt
+Physical address        0x4
+Virtual address         0x2
+Size of Section         344
+Number of Relocations   120
+Number of Line Numbers  172
+Flags                   0x1020
+  Executable code.
+  Absolute.
+
+Data
+0004:  1980  movwf   0x00
+0005:  1703  swapf   0x03, 0x0
+0006:  1883  clrf    0x03
+0007:  1980  movwf   0x00
+0008:  110a  movf    0x0a, 0x0
+0009:  188a  clrf    0x0a
+000a:  1980  movwf   0x00
+000b:  1104  movf    0x04, 0x0
+000c:  0000  nop
+000d:  1980  movwf   0x00
+000e:  0000  nop
+000f:  3000  btfss   0x00, 0x0
+0010:  2000  goto    0x0000
+0011:  3c00  bcf     0x00, 0x0
+0012:  3d80  bcf     0x00, 0x3
+0013:  3f00  bcf     0x00, 0x6
+0014:  0000  nop
+0015:  3100  btfss   0x00, 0x2
+0016:  2000  goto    0x0000
+0017:  3d00  bcf     0x00, 0x2
+0018:  04a0  movlw   0xa0
+0019:  1980  movwf   0x00
+001a:  0000  nop
+001b:  1100  movf    0x00, 0x0
+001c:  0d05  xorlw   0x05
+001d:  3503  btfsc   0x03, 0x2
+001e:  1880  clrf    0x00
+001f:  0000  nop
+0020:  1380  incf    0x00, 0x1
+0021:  1100  movf    0x00, 0x0
+0022:  0d64  xorlw   0x64
+0023:  3503  btfsc   0x03, 0x2
+0024:  1880  clrf    0x00
+0025:  0000  nop
+0026:  1100  movf    0x00, 0x0
+0027:  0800  addlw   0x00
+0028:  0000  nop
+0029:  1980  movwf   0x00
+002a:  0400  movlw   0x00
+002b:  3403  btfsc   0x03, 0x0
+002c:  0801  addlw   0x01
+002d:  1980  movwf   0x00
+002e:  1100  movf    0x00, 0x0
+002f:  3e83  bcf     0x03, 0x5
+0030:  1984  movwf   0x04
+0031:  3f83  bcf     0x03, 0x7
+0032:  0000  nop
+0033:  3400  btfsc   0x00, 0x0
+0034:  3b83  bsf     0x03, 0x7
+0035:  3e83  bcf     0x03, 0x5
+0036:  1100  movf    0x00, 0x0
+0037:  0000  nop
+0038:  1980  movwf   0x00
+0039:  0000  nop
+003a:  1b00  subwf   0x00, 0x0
+003b:  3403  btfsc   0x03, 0x0
+003c:  2000  goto    0x0000
+003d:  0000  nop
+003e:  3800  bsf     0x00, 0x0
+003f:  2000  goto    0x0000
+0040:  0000  nop
+0041:  3c00  bcf     0x00, 0x0
+0042:  0000  nop
+0043:  1380  incf    0x00, 0x1
+0044:  1100  movf    0x00, 0x0
+0045:  0d64  xorlw   0x64
+0046:  3503  btfsc   0x03, 0x2
+0047:  1880  clrf    0x00
+0048:  0000  nop
+0049:  1100  movf    0x00, 0x0
+004a:  0800  addlw   0x00
+004b:  0000  nop
+004c:  1980  movwf   0x00
+004d:  0400  movlw   0x00
+004e:  3403  btfsc   0x03, 0x0
+004f:  0801  addlw   0x01
+0050:  1980  movwf   0x00
+0051:  1100  movf    0x00, 0x0
+0052:  3e83  bcf     0x03, 0x5
+0053:  1984  movwf   0x04
+0054:  3f83  bcf     0x03, 0x7
+0055:  0000  nop
+0056:  3400  btfsc   0x00, 0x0
+0057:  3b83  bsf     0x03, 0x7
+0058:  3e83  bcf     0x03, 0x5
+0059:  1100  movf    0x00, 0x0
+005a:  0000  nop
+005b:  1980  movwf   0x00
+005c:  0000  nop
+005d:  1b00  subwf   0x00, 0x0
+005e:  3403  btfsc   0x03, 0x0
+005f:  2000  goto    0x0000
+0060:  0000  nop
+0061:  3800  bsf     0x00, 0x0
+0062:  2000  goto    0x0000
+0063:  0000  nop
+0064:  3c00  bcf     0x00, 0x0
+0065:  0000  nop
+0066:  3080  btfss   0x00, 0x1
+0067:  2000  goto    0x0000
+0068:  3c80  bcf     0x00, 0x1
+0069:  0000  nop
+006a:  3b80  bsf     0x00, 0x7
+006b:  0000  nop
+006c:  1380  incf    0x00, 0x1
+006d:  04fa  movlw   0xfa
+006e:  1b00  subwf   0x00, 0x0
+006f:  3003  btfss   0x03, 0x0
+0070:  2000  goto    0x0000
+0071:  1880  clrf    0x00
+0072:  0000  nop
+0073:  1380  incf    0x00, 0x1
+0074:  0000  nop
+0075:  3000  btfss   0x00, 0x0
+0076:  2000  goto    0x0000
+0077:  0000  nop
+0078:  1380  incf    0x00, 0x1
+0079:  2000  goto    0x0000
+007a:  0000  nop
+007b:  1880  clrf    0x00
+007c:  0000  nop
+007d:  1380  incf    0x00, 0x1
+007e:  1100  movf    0x00, 0x0
+007f:  0dc4  xorlw   0xc4
+0080:  3503  btfsc   0x03, 0x2
+0081:  1880  clrf    0x00
+0082:  04aa  movlw   0xaa
+0083:  1b00  subwf   0x00, 0x0
+0084:  3403  btfsc   0x03, 0x0
+0085:  2000  goto    0x0000
+0086:  0411  movlw   0x11
+0087:  0000  nop
+0088:  1980  movwf   0x00
+0089:  2000  goto    0x0000
+008a:  04ac  movlw   0xac
+008b:  0000  nop
+008c:  1b00  subwf   0x00, 0x0
+008d:  3403  btfsc   0x03, 0x0
+008e:  2000  goto    0x0000
+008f:  041f  movlw   0x1f
+0090:  0000  nop
+0091:  1980  movwf   0x00
+0092:  2000  goto    0x0000
+0093:  04c3  movlw   0xc3
+0094:  0000  nop
+0095:  1b00  subwf   0x00, 0x0
+0096:  3403  btfsc   0x03, 0x0
+0097:  2000  goto    0x0000
+0098:  0425  movlw   0x25
+0099:  0000  nop
+009a:  1980  movwf   0x00
+009b:  2000  goto    0x0000
+009c:  04c4  movlw   0xc4
+009d:  0000  nop
+009e:  1b00  subwf   0x00, 0x0
+009f:  3403  btfsc   0x03, 0x0
+00a0:  2000  goto    0x0000
+00a1:  0415  movlw   0x15
+00a2:  0000  nop
+00a3:  1980  movwf   0x00
+00a4:  0000  nop
+00a5:  1100  movf    0x00, 0x0
+00a6:  3e83  bcf     0x03, 0x5
+00a7:  1984  movwf   0x04
+00a8:  1100  movf    0x00, 0x0
+00a9:  198a  movwf   0x0a
+00aa:  1883  clrf    0x03
+00ab:  1700  swapf   0x00, 0x0
+00ac:  1983  movwf   0x03
+00ad:  1780  swapf   0x00, 0x1
+00ae:  1700  swapf   0x00, 0x0
+00af:  0001  retfie
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0000      0x00000000            0  0x000a RELOC_F              WSAVE
+0x0003      0x00000000            0  0x000a RELOC_F              SSAVE
+0x0006      0x00000000            0  0x000a RELOC_F              PSAVE
+0x0008      0x00000000            0  0x0006 RELOC_BANKSEL        ___sdcc_saved_fsr
+0x0009      0x00000000            0  0x000a RELOC_F              ___sdcc_saved_fsr
+0x000a      0x00000000            0  0x0006 RELOC_BANKSEL        _INTCONbits
+0x000b      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x000c      0x00000000            0  0x0002 RELOC_GOTO           _00242_DS_
+0x000d      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x000e      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x000f      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x0010      0x00000000            0  0x0006 RELOC_BANKSEL        _INTCONbits
+0x0011      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x0012      0x00000000            0  0x0002 RELOC_GOTO           _00256_DS_
+0x0013      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x0015      0x00000000            0  0x000a RELOC_F              _T0
+0x0016      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear
+0x0017      0x00000000            0  0x000a RELOC_F              _Gear
+0x001a      0x00000000            0  0x000a RELOC_F              _Gear
+0x001b      0x00000000            0  0x0006 RELOC_BANKSEL        _Pwm1_Count
+0x001c      0x00000000            0  0x000a RELOC_F              _Pwm1_Count
+0x001d      0x00000000            0  0x000a RELOC_F              _Pwm1_Count
+0x0020      0x00000000            0  0x000a RELOC_F              _Pwm1_Count
+0x0021      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear
+0x0022      0x00000000            0  0x000a RELOC_F              _Gear
+0x0023      0x00000000            0  0x0004 RELOC_LOW            _Pwm1_Duty_Ratio
+0x0024      0x00000000            0  0x0006 RELOC_BANKSEL        r0x1023
+0x0025      0x00000000            0  0x000a RELOC_F              r0x1023
+0x0026      0x00000000            0  0x0003 RELOC_HIGH           _Pwm1_Duty_Ratio
+0x0029      0x00000000            0  0x000a RELOC_F              r0x1024
+0x002a      0x00000000            0  0x000a RELOC_F              r0x1023
+0x002e      0x00000000            0  0x0006 RELOC_BANKSEL        r0x1024
+0x002f      0x00000000            0  0x000a RELOC_F              r0x1024
+0x0033      0x00000000            0  0x0006 RELOC_BANKSEL        r0x1025
+0x0034      0x00000000            0  0x000a RELOC_F              r0x1025
+0x0035      0x00000000            0  0x0006 RELOC_BANKSEL        _Pwm1_Count
+0x0036      0x00000000            0  0x000a RELOC_F              _Pwm1_Count
+0x0038      0x00000000            0  0x0002 RELOC_GOTO           _00248_DS_
+0x0039      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTAbits
+0x003a      0x00000000            0  0x000a RELOC_F              _PORTAbits
+0x003b      0x00000000            0  0x0002 RELOC_GOTO           _00249_DS_
+0x003c      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTAbits
+0x003d      0x00000000            0  0x000a RELOC_F              _PORTAbits
+0x003e      0x00000000            0  0x0006 RELOC_BANKSEL        _Pwm2_Count
+0x003f      0x00000000            0  0x000a RELOC_F              _Pwm2_Count
+0x0040      0x00000000            0  0x000a RELOC_F              _Pwm2_Count
+0x0043      0x00000000            0  0x000a RELOC_F              _Pwm2_Count
+0x0044      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear
+0x0045      0x00000000            0  0x000a RELOC_F              _Gear
+0x0046      0x00000000            0  0x0004 RELOC_LOW            _Pwm2_Duty_Ratio
+0x0047      0x00000000            0  0x0006 RELOC_BANKSEL        r0x1023
+0x0048      0x00000000            0  0x000a RELOC_F              r0x1023
+0x0049      0x00000000            0  0x0003 RELOC_HIGH           _Pwm2_Duty_Ratio
+0x004c      0x00000000            0  0x000a RELOC_F              r0x1024
+0x004d      0x00000000            0  0x000a RELOC_F              r0x1023
+0x0051      0x00000000            0  0x0006 RELOC_BANKSEL        r0x1024
+0x0052      0x00000000            0  0x000a RELOC_F              r0x1024
+0x0056      0x00000000            0  0x0006 RELOC_BANKSEL        r0x1025
+0x0057      0x00000000            0  0x000a RELOC_F              r0x1025
+0x0058      0x00000000            0  0x0006 RELOC_BANKSEL        _Pwm2_Count
+0x0059      0x00000000            0  0x000a RELOC_F              _Pwm2_Count
+0x005b      0x00000000            0  0x0002 RELOC_GOTO           _00253_DS_
+0x005c      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTBbits
+0x005d      0x00000000            0  0x000a RELOC_F              _PORTBbits
+0x005e      0x00000000            0  0x0002 RELOC_GOTO           _00256_DS_
+0x005f      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTBbits
+0x0060      0x00000000            0  0x000a RELOC_F              _PORTBbits
+0x0061      0x00000000            0  0x0006 RELOC_BANKSEL        _PIR1bits
+0x0062      0x00000000            0  0x000a RELOC_F              _PIR1bits
+0x0063      0x00000000            0  0x0002 RELOC_GOTO           _00277_DS_
+0x0064      0x00000000            0  0x000a RELOC_F              _PIR1bits
+0x0065      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x0066      0x00000000            0  0x000a RELOC_F              _flag1
+0x0067      0x00000000            0  0x0006 RELOC_BANKSEL        _time_2ms
+0x0068      0x00000000            0  0x000a RELOC_F              _time_2ms
+0x006a      0x00000000            0  0x000a RELOC_F              _time_2ms
+0x006c      0x00000000            0  0x0002 RELOC_GOTO           _00261_DS_
+0x006d      0x00000000            0  0x000a RELOC_F              _time_2ms
+0x006e      0x00000000            0  0x0006 RELOC_BANKSEL        _Time_500MS
+0x006f      0x00000000            0  0x000a RELOC_F              _Time_500MS
+0x0070      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x0071      0x00000000            0  0x000a RELOC_F              _flag1
+0x0072      0x00000000            0  0x0002 RELOC_GOTO           _00258_DS_
+0x0073      0x00000000            0  0x0006 RELOC_BANKSEL        _Red_Flash
+0x0074      0x00000000            0  0x000a RELOC_F              _Red_Flash
+0x0075      0x00000000            0  0x0002 RELOC_GOTO           _00261_DS_
+0x0076      0x00000000            0  0x0006 RELOC_BANKSEL        _Red_Flash
+0x0077      0x00000000            0  0x000a RELOC_F              _Red_Flash
+0x0078      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear4_temp
+0x0079      0x00000000            0  0x000a RELOC_F              _Gear4_temp
+0x007a      0x00000000            0  0x000a RELOC_F              _Gear4_temp
+0x007d      0x00000000            0  0x000a RELOC_F              _Gear4_temp
+0x007f      0x00000000            0  0x000a RELOC_F              _Gear4_temp
+0x0081      0x00000000            0  0x0002 RELOC_GOTO           _00273_DS_
+0x0083      0x00000000            0  0x0006 RELOC_BANKSEL        _Pwm1_Duty_Ratio
+0x0084      0x00000004            4  0x000a RELOC_F              _Pwm1_Duty_Ratio
+0x0085      0x00000000            0  0x0002 RELOC_GOTO           _00277_DS_
+0x0087      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear4_temp
+0x0088      0x00000000            0  0x000a RELOC_F              _Gear4_temp
+0x008a      0x00000000            0  0x0002 RELOC_GOTO           _00270_DS_
+0x008c      0x00000000            0  0x0006 RELOC_BANKSEL        _Pwm1_Duty_Ratio
+0x008d      0x00000004            4  0x000a RELOC_F              _Pwm1_Duty_Ratio
+0x008e      0x00000000            0  0x0002 RELOC_GOTO           _00277_DS_
+0x0090      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear4_temp
+0x0091      0x00000000            0  0x000a RELOC_F              _Gear4_temp
+0x0093      0x00000000            0  0x0002 RELOC_GOTO           _00267_DS_
+0x0095      0x00000000            0  0x0006 RELOC_BANKSEL        _Pwm1_Duty_Ratio
+0x0096      0x00000004            4  0x000a RELOC_F              _Pwm1_Duty_Ratio
+0x0097      0x00000000            0  0x0002 RELOC_GOTO           _00277_DS_
+0x0099      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear4_temp
+0x009a      0x00000000            0  0x000a RELOC_F              _Gear4_temp
+0x009c      0x00000000            0  0x0002 RELOC_GOTO           _00277_DS_
+0x009e      0x00000000            0  0x0006 RELOC_BANKSEL        _Pwm1_Duty_Ratio
+0x009f      0x00000004            4  0x000a RELOC_F              _Pwm1_Duty_Ratio
+0x00a0      0x00000000            0  0x0006 RELOC_BANKSEL        ___sdcc_saved_fsr
+0x00a1      0x00000000            0  0x000a RELOC_F              ___sdcc_saved_fsr
+0x00a4      0x00000000            0  0x000a RELOC_F              PSAVE
+0x00a7      0x00000000            0  0x000a RELOC_F              SSAVE
+0x00a9      0x00000000            0  0x000a RELOC_F              WSAVE
+0x00aa      0x00000000            0  0x000a RELOC_F              WSAVE
+
+Line Number Table
+Line      Address     Symbol
+272       0x0004      main.asm
+273       0x0005      main.asm
+274       0x0006      main.asm
+275       0x0007      main.asm
+276       0x0008      main.asm
+277       0x0009      main.asm
+278       0x000a      main.asm
+279       0x000b      main.asm
+280       0x000c      main.asm
+281       0x000d      main.asm
+283       0x000e      main.asm
+284       0x000f      main.asm
+285       0x0010      main.asm
+287       0x0011      main.asm
+289       0x0012      main.asm
+291       0x0013      main.asm
+294       0x0014      main.asm
+295       0x0015      main.asm
+296       0x0016      main.asm
+298       0x0017      main.asm
+300       0x0018      main.asm
+301       0x0019      main.asm
+303       0x001a      main.asm
+304       0x001b      main.asm
+306       0x001c      main.asm
+308       0x001d      main.asm
+309       0x001e      main.asm
+310       0x001f      main.asm
+311       0x0020      main.asm
+313       0x0021      main.asm
+315       0x0022      main.asm
+317       0x0023      main.asm
+318       0x0024      main.asm
+319       0x0025      main.asm
+320       0x0026      main.asm
+321       0x0027      main.asm
+322       0x0028      main.asm
+323       0x0029      main.asm
+324       0x002a      main.asm
+325       0x002b      main.asm
+326       0x002c      main.asm
+327       0x002d      main.asm
+328       0x002e      main.asm
+329       0x002f      main.asm
+330       0x0030      main.asm
+331       0x0031      main.asm
+332       0x0032      main.asm
+333       0x0033      main.asm
+334       0x0034      main.asm
+335       0x0035      main.asm
+336       0x0036      main.asm
+337       0x0037      main.asm
+338       0x0038      main.asm
+339       0x0039      main.asm
+340       0x003a      main.asm
+341       0x003b      main.asm
+342       0x003c      main.asm
+345       0x003d      main.asm
+346       0x003e      main.asm
+347       0x003f      main.asm
+350       0x0040      main.asm
+351       0x0041      main.asm
+354       0x0042      main.asm
+355       0x0043      main.asm
+357       0x0044      main.asm
+359       0x0045      main.asm
+361       0x0046      main.asm
+362       0x0047      main.asm
+363       0x0048      main.asm
+364       0x0049      main.asm
+365       0x004a      main.asm
+366       0x004b      main.asm
+367       0x004c      main.asm
+368       0x004d      main.asm
+369       0x004e      main.asm
+370       0x004f      main.asm
+371       0x0050      main.asm
+372       0x0051      main.asm
+373       0x0052      main.asm
+374       0x0053      main.asm
+375       0x0054      main.asm
+376       0x0055      main.asm
+377       0x0056      main.asm
+378       0x0057      main.asm
+379       0x0058      main.asm
+380       0x0059      main.asm
+381       0x005a      main.asm
+382       0x005b      main.asm
+383       0x005c      main.asm
+384       0x005d      main.asm
+385       0x005e      main.asm
+386       0x005f      main.asm
+389       0x0060      main.asm
+390       0x0061      main.asm
+391       0x0062      main.asm
+394       0x0063      main.asm
+395       0x0064      main.asm
+398       0x0065      main.asm
+399       0x0066      main.asm
+400       0x0067      main.asm
+402       0x0068      main.asm
+404       0x0069      main.asm
+405       0x006a      main.asm
+407       0x006b      main.asm
+408       0x006c      main.asm
+411       0x006d      main.asm
+412       0x006e      main.asm
+413       0x006f      main.asm
+414       0x0070      main.asm
+417       0x0071      main.asm
+419       0x0072      main.asm
+420       0x0073      main.asm
+422       0x0074      main.asm
+423       0x0075      main.asm
+424       0x0076      main.asm
+426       0x0077      main.asm
+427       0x0078      main.asm
+428       0x0079      main.asm
+431       0x007a      main.asm
+432       0x007b      main.asm
+435       0x007c      main.asm
+436       0x007d      main.asm
+438       0x007e      main.asm
+440       0x007f      main.asm
+442       0x0080      main.asm
+443       0x0081      main.asm
+444       0x0082      main.asm
+445       0x0083      main.asm
+446       0x0084      main.asm
+447       0x0085      main.asm
+451       0x0086      main.asm
+452       0x0087      main.asm
+453       0x0088      main.asm
+454       0x0089      main.asm
+458       0x008a      main.asm
+459       0x008b      main.asm
+460       0x008c      main.asm
+461       0x008d      main.asm
+462       0x008e      main.asm
+466       0x008f      main.asm
+467       0x0090      main.asm
+468       0x0091      main.asm
+469       0x0092      main.asm
+473       0x0093      main.asm
+474       0x0094      main.asm
+475       0x0095      main.asm
+476       0x0096      main.asm
+477       0x0097      main.asm
+481       0x0098      main.asm
+482       0x0099      main.asm
+483       0x009a      main.asm
+484       0x009b      main.asm
+488       0x009c      main.asm
+489       0x009d      main.asm
+490       0x009e      main.asm
+491       0x009f      main.asm
+492       0x00a0      main.asm
+496       0x00a1      main.asm
+497       0x00a2      main.asm
+498       0x00a3      main.asm
+500       0x00a4      main.asm
+501       0x00a5      main.asm
+502       0x00a6      main.asm
+503       0x00a7      main.asm
+504       0x00a8      main.asm
+505       0x00a9      main.asm
+506       0x00aa      main.asm
+507       0x00ab      main.asm
+508       0x00ac      main.asm
+509       0x00ad      main.asm
+510       0x00ae      main.asm
+512       0x00af      main.asm
+
+Section Header
+Name                    code_main
+Physical address        0
+Virtual address         0
+Size of Section         0
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x20
+  Executable code.
+
+Section Header
+Name                    S_main__main
+Physical address        0
+Virtual address         0
+Size of Section         50
+Number of Relocations   21
+Number of Line Numbers  25
+Flags                   0x20
+  Executable code.
+
+Data
+0000:  2800  call    0x0000
+0001:  0464  movlw   0x64
+0002:  1980  movwf   0x00
+0003:  0400  movlw   0x00
+0004:  2800  call    0x0000
+0005:  2800  call    0x0000
+0006:  2800  call    0x0000
+0007:  0000  nop
+0008:  3f00  bcf     0x00, 0x6
+0009:  0000  nop
+000a:  3800  bsf     0x00, 0x0
+000b:  3c00  bcf     0x00, 0x0
+000c:  3b80  bsf     0x00, 0x7
+000d:  0000  nop
+000e:  3380  btfss   0x00, 0x7
+000f:  2000  goto    0x0000
+0010:  3f80  bcf     0x00, 0x7
+0011:  0004  clrwdt
+0012:  2800  call    0x0000
+0013:  2800  call    0x0000
+0014:  2800  call    0x0000
+0015:  2800  call    0x0000
+0016:  2800  call    0x0000
+0017:  2000  goto    0x0000
+0018:  0002  return
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0000      0x00000000            0  0x0001 RELOC_CALL           _inital
+0x0002      0x00000000            0  0x000a RELOC_F              STK00
+0x0004      0x00000000            0  0x0001 RELOC_CALL           _DelayMs
+0x0005      0x00000000            0  0x0001 RELOC_CALL           _sysinitial
+0x0006      0x00000000            0  0x0001 RELOC_CALL           _initValue
+0x0007      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x0008      0x00000000            0  0x000a RELOC_F              _flag1
+0x0009      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTBbits
+0x000a      0x00000000            0  0x000a RELOC_F              _PORTBbits
+0x000b      0x00000000            0  0x000a RELOC_F              _PORTAbits
+0x000c      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x000d      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x000e      0x00000000            0  0x000a RELOC_F              _flag1
+0x000f      0x00000000            0  0x0002 RELOC_GOTO           _00236_DS_
+0x0010      0x00000000            0  0x000a RELOC_F              _flag1
+0x0012      0x00000000            0  0x0001 RELOC_CALL           _KeyScan
+0x0013      0x00000000            0  0x0001 RELOC_CALL           _AdjustGear
+0x0014      0x00000000            0  0x0001 RELOC_CALL           _batt_test
+0x0015      0x00000000            0  0x0001 RELOC_CALL           _ChIntput
+0x0016      0x00000000            0  0x0001 RELOC_CALL           _SleepMode
+0x0017      0x00000000            0  0x0002 RELOC_GOTO           _00236_DS_
+
+Line Number Table
+Line      Address     Symbol
+548       0x0000      main.asm
+550       0x0001      main.asm
+551       0x0002      main.asm
+552       0x0003      main.asm
+553       0x0004      main.asm
+555       0x0005      main.asm
+557       0x0006      main.asm
+559       0x0007      main.asm
+560       0x0008      main.asm
+562       0x0009      main.asm
+563       0x000a      main.asm
+565       0x000b      main.asm
+567       0x000c      main.asm
+570       0x000d      main.asm
+571       0x000e      main.asm
+572       0x000f      main.asm
+574       0x0010      main.asm
+575       0x0011      main.asm
+577       0x0012      main.asm
+579       0x0013      main.asm
+581       0x0014      main.asm
+583       0x0015      main.asm
+585       0x0016      main.asm
+586       0x0017      main.asm
+587       0x0018      main.asm
+
+Section Header
+Name                    S_main__initValue
+Physical address        0
+Virtual address         0
+Size of Section         40
+Number of Relocations   18
+Number of Line Numbers  20
+Flags                   0x20
+  Executable code.
+
+Data
+0000:  0000  nop
+0001:  1880  clrf    0x00
+0002:  0000  nop
+0003:  1880  clrf    0x00
+0004:  0000  nop
+0005:  1880  clrf    0x00
+0006:  0000  nop
+0007:  1880  clrf    0x00
+0008:  0000  nop
+0009:  1880  clrf    0x00
+000a:  0000  nop
+000b:  1880  clrf    0x00
+000c:  0432  movlw   0x32
+000d:  0000  nop
+000e:  1980  movwf   0x00
+000f:  0000  nop
+0010:  1880  clrf    0x00
+0011:  0000  nop
+0012:  1880  clrf    0x00
+0013:  0002  return
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0000      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x0001      0x00000000            0  0x000a RELOC_F              _flag1
+0x0002      0x00000000            0  0x0006 RELOC_BANKSEL        _flag2
+0x0003      0x00000000            0  0x000a RELOC_F              _flag2
+0x0004      0x00000000            0  0x0006 RELOC_BANKSEL        _Time_Seep
+0x0005      0x00000000            0  0x000a RELOC_F              _Time_Seep
+0x0006      0x00000000            0  0x0006 RELOC_BANKSEL        _Key_Mode
+0x0007      0x00000000            0  0x000a RELOC_F              _Key_Mode
+0x0008      0x00000000            0  0x0006 RELOC_BANKSEL        _key_press_time
+0x0009      0x00000000            0  0x000a RELOC_F              _key_press_time
+0x000a      0x00000000            0  0x0006 RELOC_BANKSEL        _Pwm1_Count
+0x000b      0x00000000            0  0x000a RELOC_F              _Pwm1_Count
+0x000d      0x00000000            0  0x0006 RELOC_BANKSEL        _Pwm2_Count
+0x000e      0x00000000            0  0x000a RELOC_F              _Pwm2_Count
+0x000f      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear4_temp
+0x0010      0x00000000            0  0x000a RELOC_F              _Gear4_temp
+0x0011      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear
+0x0012      0x00000000            0  0x000a RELOC_F              _Gear
+
+Line Number Table
+Line      Address     Symbol
+600       0x0000      main.asm
+601       0x0001      main.asm
+604       0x0002      main.asm
+605       0x0003      main.asm
+607       0x0004      main.asm
+608       0x0005      main.asm
+610       0x0006      main.asm
+611       0x0007      main.asm
+613       0x0008      main.asm
+614       0x0009      main.asm
+616       0x000a      main.asm
+617       0x000b      main.asm
+619       0x000c      main.asm
+620       0x000d      main.asm
+621       0x000e      main.asm
+623       0x000f      main.asm
+624       0x0010      main.asm
+626       0x0011      main.asm
+627       0x0012      main.asm
+628       0x0013      main.asm
+
+Section Header
+Name                    S_main__SleepMode
+Physical address        0
+Virtual address         0
+Size of Section         84
+Number of Relocations   35
+Number of Line Numbers  42
+Flags                   0x20
+  Executable code.
+
+Data
+0000:  0000  nop
+0001:  1380  incf    0x00, 0x1
+0002:  0433  movlw   0x33
+0003:  1b00  subwf   0x00, 0x0
+0004:  3003  btfss   0x03, 0x0
+0005:  2000  goto    0x0000
+0006:  1880  clrf    0x00
+0007:  0000  nop
+0008:  3b00  bsf     0x00, 0x6
+0009:  3a00  bsf     0x00, 0x4
+000a:  3c00  bcf     0x00, 0x0
+000b:  3c00  bcf     0x00, 0x0
+000c:  0000  nop
+000d:  3f00  bcf     0x00, 0x6
+000e:  0000  nop
+000f:  3c00  bcf     0x00, 0x0
+0010:  3c80  bcf     0x00, 0x1
+0011:  0000  nop
+0012:  1880  clrf    0x00
+0013:  3e00  bcf     0x00, 0x4
+0014:  0000  nop
+0015:  3f80  bcf     0x00, 0x7
+0016:  3e80  bcf     0x00, 0x5
+0017:  3980  bsf     0x00, 0x3
+0018:  3f00  bcf     0x00, 0x6
+0019:  3980  bsf     0x00, 0x3
+001a:  3a80  bsf     0x00, 0x5
+001b:  3e00  bcf     0x00, 0x4
+001c:  0000  nop
+001d:  0003  sleep
+001e:  0000  nop
+001f:  0000  nop
+0020:  3b80  bsf     0x00, 0x7
+0021:  3d80  bcf     0x00, 0x3
+0022:  3e80  bcf     0x00, 0x5
+0023:  3a80  bsf     0x00, 0x5
+0024:  3d80  bcf     0x00, 0x3
+0025:  0000  nop
+0026:  3a00  bsf     0x00, 0x4
+0027:  0440  movlw   0x40
+0028:  1980  movwf   0x00
+0029:  0002  return
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0000      0x00000000            0  0x0006 RELOC_BANKSEL        _Time_Seep
+0x0001      0x00000000            0  0x000a RELOC_F              _Time_Seep
+0x0003      0x00000000            0  0x000a RELOC_F              _Time_Seep
+0x0005      0x00000000            0  0x0002 RELOC_GOTO           _00224_DS_
+0x0006      0x00000000            0  0x000a RELOC_F              _Time_Seep
+0x0007      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTBbits
+0x0008      0x00000000            0  0x000a RELOC_F              _PORTBbits
+0x0009      0x00000000            0  0x000a RELOC_F              _PORTAbits
+0x000a      0x00000000            0  0x000a RELOC_F              _PORTAbits
+0x000b      0x00000000            0  0x000a RELOC_F              _PORTBbits
+0x000c      0x00000000            0  0x0006 RELOC_BANKSEL        _PIE1bits
+0x000d      0x00000000            0  0x000a RELOC_F              _PIE1bits
+0x000e      0x00000000            0  0x0006 RELOC_BANKSEL        _ADCON0bits
+0x000f      0x00000000            0  0x000a RELOC_F              _ADCON0bits
+0x0010      0x00000000            0  0x000a RELOC_F              _ADCON0bits
+0x0011      0x00000000            0  0x0006 RELOC_BANKSEL        _PIE1
+0x0012      0x00000000            0  0x000a RELOC_F              _PIE1
+0x0013      0x00000000            0  0x000a RELOC_F              _PCONbits
+0x0014      0x00000000            0  0x0006 RELOC_BANKSEL        _INTCONbits
+0x0015      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x0016      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x0017      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x0018      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x0019      0x00000000            0  0x000a RELOC_F              _IOCBbits
+0x001a      0x00000000            0  0x000a RELOC_F              _IOCBbits
+0x001b      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x001f      0x00000000            0  0x0006 RELOC_BANKSEL        _INTCONbits
+0x0020      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x0021      0x00000000            0  0x000a RELOC_F              _IOCBbits
+0x0022      0x00000000            0  0x000a RELOC_F              _IOCBbits
+0x0023      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x0024      0x00000000            0  0x000a RELOC_F              _INTCONbits
+0x0025      0x00000000            0  0x0006 RELOC_BANKSEL        _PCONbits
+0x0026      0x00000000            0  0x000a RELOC_F              _PCONbits
+0x0028      0x00000000            0  0x000a RELOC_F              _PIE1
+
+Line Number Table
+Line      Address     Symbol
+640       0x0000      main.asm
+641       0x0001      main.asm
+645       0x0002      main.asm
+646       0x0003      main.asm
+647       0x0004      main.asm
+648       0x0005      main.asm
+651       0x0006      main.asm
+653       0x0007      main.asm
+654       0x0008      main.asm
+656       0x0009      main.asm
+658       0x000a      main.asm
+660       0x000b      main.asm
+662       0x000c      main.asm
+663       0x000d      main.asm
+665       0x000e      main.asm
+666       0x000f      main.asm
+668       0x0010      main.asm
+670       0x0011      main.asm
+671       0x0012      main.asm
+673       0x0013      main.asm
+675       0x0014      main.asm
+676       0x0015      main.asm
+678       0x0016      main.asm
+680       0x0017      main.asm
+682       0x0018      main.asm
+684       0x0019      main.asm
+686       0x001a      main.asm
+688       0x001b      main.asm
+689       0x001c      main.asm
+690       0x001d      main.asm
+691       0x001e      main.asm
+693       0x001f      main.asm
+694       0x0020      main.asm
+696       0x0021      main.asm
+698       0x0022      main.asm
+700       0x0023      main.asm
+702       0x0024      main.asm
+704       0x0025      main.asm
+705       0x0026      main.asm
+707       0x0027      main.asm
+708       0x0028      main.asm
+710       0x0029      main.asm
+
+Section Header
+Name                    S_main__batt_test
+Physical address        0
+Virtual address         0
+Size of Section         52
+Number of Relocations   19
+Number of Line Numbers  26
+Flags                   0x20
+  Executable code.
+
+Data
+0000:  0000  nop
+0001:  3580  btfsc   0x00, 0x3
+0002:  2000  goto    0x0000
+0003:  0400  movlw   0x00
+0004:  0000  nop
+0005:  1d00  iorwf   0x00, 0x0
+0006:  3503  btfsc   0x03, 0x2
+0007:  2000  goto    0x0000
+0008:  0000  nop
+0009:  1880  clrf    0x00
+000a:  2800  call    0x0000
+000b:  0000  nop
+000c:  3700  btfsc   0x00, 0x6
+000d:  2000  goto    0x0000
+000e:  0406  movlw   0x06
+000f:  0000  nop
+0010:  1b00  subwf   0x00, 0x0
+0011:  3103  btfss   0x03, 0x2
+0012:  2000  goto    0x0000
+0013:  0400  movlw   0x00
+0014:  1b00  subwf   0x00, 0x0
+0015:  3403  btfsc   0x03, 0x0
+0016:  2000  goto    0x0000
+0017:  0000  nop
+0018:  3b00  bsf     0x00, 0x6
+0019:  0002  return
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0000      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTBbits
+0x0001      0x00000000            0  0x000a RELOC_F              _PORTBbits
+0x0002      0x00000000            0  0x0002 RELOC_GOTO           _00203_DS_
+0x0004      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear
+0x0005      0x00000000            0  0x000a RELOC_F              _Gear
+0x0007      0x00000000            0  0x0002 RELOC_GOTO           _00203_DS_
+0x0008      0x00000000            0  0x0006 RELOC_BANKSEL        _Time_Seep
+0x0009      0x00000000            0  0x000a RELOC_F              _Time_Seep
+0x000a      0x00000000            0  0x0001 RELOC_CALL           _adc_get
+0x000b      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x000c      0x00000000            0  0x000a RELOC_F              _flag1
+0x000d      0x00000000            0  0x0002 RELOC_GOTO           _00203_DS_
+0x000f      0x00000000            0  0x0006 RELOC_BANKSEL        _adc_value
+0x0010      0x00000001            1  0x000a RELOC_F              _adc_value
+0x0012      0x00000000            0  0x0002 RELOC_GOTO           _00217_DS_
+0x0014      0x00000000            0  0x000a RELOC_F              _adc_value
+0x0016      0x00000000            0  0x0002 RELOC_GOTO           _00203_DS_
+0x0017      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x0018      0x00000000            0  0x000a RELOC_F              _flag1
+
+Line Number Table
+Line      Address     Symbol
+725       0x0000      main.asm
+726       0x0001      main.asm
+727       0x0002      main.asm
+728       0x0003      main.asm
+729       0x0004      main.asm
+730       0x0005      main.asm
+731       0x0006      main.asm
+732       0x0007      main.asm
+734       0x0008      main.asm
+735       0x0009      main.asm
+737       0x000a      main.asm
+739       0x000b      main.asm
+740       0x000c      main.asm
+741       0x000d      main.asm
+744       0x000e      main.asm
+745       0x000f      main.asm
+746       0x0010      main.asm
+747       0x0011      main.asm
+748       0x0012      main.asm
+749       0x0013      main.asm
+750       0x0014      main.asm
+752       0x0015      main.asm
+753       0x0016      main.asm
+756       0x0017      main.asm
+757       0x0018      main.asm
+759       0x0019      main.asm
+
+Section Header
+Name                    S_main__ChIntput
+Physical address        0
+Virtual address         0
+Size of Section         86
+Number of Relocations   38
+Number of Line Numbers  43
+Flags                   0x20
+  Executable code.
+
+Data
+0000:  0000  nop
+0001:  3180  btfss   0x00, 0x3
+0002:  2000  goto    0x0000
+0003:  0000  nop
+0004:  1880  clrf    0x00
+0005:  0000  nop
+0006:  3400  btfsc   0x00, 0x0
+0007:  2000  goto    0x0000
+0008:  3800  bsf     0x00, 0x0
+0009:  0000  nop
+000a:  1880  clrf    0x00
+000b:  0000  nop
+000c:  3b00  bsf     0x00, 0x6
+000d:  0000  nop
+000e:  3f80  bcf     0x00, 0x7
+000f:  3f00  bcf     0x00, 0x6
+0010:  2800  call    0x0000
+0011:  0408  movlw   0x08
+0012:  0000  nop
+0013:  1b00  subwf   0x00, 0x0
+0014:  3103  btfss   0x03, 0x2
+0015:  2000  goto    0x0000
+0016:  045d  movlw   0x5d
+0017:  1b00  subwf   0x00, 0x0
+0018:  3003  btfss   0x03, 0x0
+0019:  2000  goto    0x0000
+001a:  0000  nop
+001b:  3b80  bsf     0x00, 0x7
+001c:  0000  nop
+001d:  3380  btfss   0x00, 0x7
+001e:  2000  goto    0x0000
+001f:  2800  call    0x0000
+0020:  0000  nop
+0021:  3800  bsf     0x00, 0x0
+0022:  2000  goto    0x0000
+0023:  0000  nop
+0024:  3e00  bcf     0x00, 0x4
+0025:  0000  nop
+0026:  3c00  bcf     0x00, 0x0
+0027:  2000  goto    0x0000
+0028:  0000  nop
+0029:  3c00  bcf     0x00, 0x0
+002a:  0002  return
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0000      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTBbits
+0x0001      0x00000000            0  0x000a RELOC_F              _PORTBbits
+0x0002      0x00000000            0  0x0002 RELOC_GOTO           _00175_DS_
+0x0003      0x00000000            0  0x0006 RELOC_BANKSEL        _Time_Seep
+0x0004      0x00000000            0  0x000a RELOC_F              _Time_Seep
+0x0005      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x0006      0x00000000            0  0x000a RELOC_F              _flag1
+0x0007      0x00000000            0  0x0002 RELOC_GOTO           _00168_DS_
+0x0008      0x00000000            0  0x000a RELOC_F              _flag1
+0x0009      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear
+0x000a      0x00000000            0  0x000a RELOC_F              _Gear
+0x000b      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTBbits
+0x000c      0x00000000            0  0x000a RELOC_F              _PORTBbits
+0x000d      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x000e      0x00000000            0  0x000a RELOC_F              _flag1
+0x000f      0x00000000            0  0x000a RELOC_F              _flag1
+0x0010      0x00000000            0  0x0001 RELOC_CALL           _adc_get
+0x0012      0x00000000            0  0x0006 RELOC_BANKSEL        _adc_value
+0x0013      0x00000001            1  0x000a RELOC_F              _adc_value
+0x0015      0x00000000            0  0x0002 RELOC_GOTO           _00191_DS_
+0x0017      0x00000000            0  0x000a RELOC_F              _adc_value
+0x0019      0x00000000            0  0x0002 RELOC_GOTO           _00170_DS_
+0x001a      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x001b      0x00000000            0  0x000a RELOC_F              _flag1
+0x001c      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x001d      0x00000000            0  0x000a RELOC_F              _flag1
+0x001e      0x00000000            0  0x0002 RELOC_GOTO           _00172_DS_
+0x001f      0x00000000            0  0x0001 RELOC_CALL           _RedFlash
+0x0020      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x0021      0x00000000            0  0x000a RELOC_F              _flag1
+0x0022      0x00000000            0  0x0002 RELOC_GOTO           _00177_DS_
+0x0023      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTAbits
+0x0024      0x00000000            0  0x000a RELOC_F              _PORTAbits
+0x0025      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x0026      0x00000000            0  0x000a RELOC_F              _flag1
+0x0027      0x00000000            0  0x0002 RELOC_GOTO           _00177_DS_
+0x0028      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x0029      0x00000000            0  0x000a RELOC_F              _flag1
+
+Line Number Table
+Line      Address     Symbol
+776       0x0000      main.asm
+777       0x0001      main.asm
+778       0x0002      main.asm
+780       0x0003      main.asm
+781       0x0004      main.asm
+783       0x0005      main.asm
+784       0x0006      main.asm
+785       0x0007      main.asm
+787       0x0008      main.asm
+789       0x0009      main.asm
+790       0x000a      main.asm
+792       0x000b      main.asm
+793       0x000c      main.asm
+795       0x000d      main.asm
+796       0x000e      main.asm
+798       0x000f      main.asm
+801       0x0010      main.asm
+805       0x0011      main.asm
+806       0x0012      main.asm
+807       0x0013      main.asm
+808       0x0014      main.asm
+809       0x0015      main.asm
+810       0x0016      main.asm
+811       0x0017      main.asm
+813       0x0018      main.asm
+814       0x0019      main.asm
+817       0x001a      main.asm
+818       0x001b      main.asm
+821       0x001c      main.asm
+822       0x001d      main.asm
+823       0x001e      main.asm
+825       0x001f      main.asm
+827       0x0020      main.asm
+828       0x0021      main.asm
+829       0x0022      main.asm
+832       0x0023      main.asm
+833       0x0024      main.asm
+835       0x0025      main.asm
+836       0x0026      main.asm
+837       0x0027      main.asm
+840       0x0028      main.asm
+841       0x0029      main.asm
+843       0x002a      main.asm
+
+Section Header
+Name                    S_main__AdjustGear
+Physical address        0
+Virtual address         0
+Size of Section         116
+Number of Relocations   45
+Number of Line Numbers  58
+Flags                   0x20
+  Executable code.
+
+Data
+0000:  0400  movlw   0x00
+0001:  0000  nop
+0002:  1d00  iorwf   0x00, 0x0
+0003:  3503  btfsc   0x03, 0x2
+0004:  2000  goto    0x0000
+0005:  0000  nop
+0006:  1880  clrf    0x00
+0007:  0000  nop
+0008:  3300  btfss   0x00, 0x6
+0009:  2000  goto    0x0000
+000a:  0000  nop
+000b:  3b00  bsf     0x00, 0x6
+000c:  0000  nop
+000d:  3800  bsf     0x00, 0x0
+000e:  2800  call    0x0000
+000f:  0478  movlw   0x78
+0010:  0000  nop
+0011:  1b00  subwf   0x00, 0x0
+0012:  3003  btfss   0x03, 0x0
+0013:  2000  goto    0x0000
+0014:  0000  nop
+0015:  3b00  bsf     0x00, 0x6
+0016:  0000  nop
+0017:  1880  clrf    0x00
+0018:  0400  movlw   0x00
+0019:  0000  nop
+001a:  1d00  iorwf   0x00, 0x0
+001b:  3503  btfsc   0x03, 0x2
+001c:  2000  goto    0x0000
+001d:  1880  clrf    0x00
+001e:  0000  nop
+001f:  1380  incf    0x00, 0x1
+0020:  1100  movf    0x00, 0x0
+0021:  0d05  xorlw   0x05
+0022:  3503  btfsc   0x03, 0x2
+0023:  1880  clrf    0x00
+0024:  0000  nop
+0025:  1880  clrf    0x00
+0026:  0000  nop
+0027:  1880  clrf    0x00
+0028:  0000  nop
+0029:  1100  movf    0x00, 0x0
+002a:  0d01  xorlw   0x01
+002b:  3103  btfss   0x03, 0x2
+002c:  2000  goto    0x0000
+002d:  0000  nop
+002e:  3700  btfsc   0x00, 0x6
+002f:  2000  goto    0x0000
+0030:  0000  nop
+0031:  3f00  bcf     0x00, 0x6
+0032:  0400  movlw   0x00
+0033:  0000  nop
+0034:  1d00  iorwf   0x00, 0x0
+0035:  3103  btfss   0x03, 0x2
+0036:  2000  goto    0x0000
+0037:  0000  nop
+0038:  3b00  bsf     0x00, 0x6
+0039:  0002  return
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0001      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear
+0x0002      0x00000000            0  0x000a RELOC_F              _Gear
+0x0004      0x00000000            0  0x0002 RELOC_GOTO           _00151_DS_
+0x0005      0x00000000            0  0x0006 RELOC_BANKSEL        _Time_Seep
+0x0006      0x00000000            0  0x000a RELOC_F              _Time_Seep
+0x0007      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x0008      0x00000000            0  0x000a RELOC_F              _flag1
+0x0009      0x00000000            0  0x0002 RELOC_GOTO           _00147_DS_
+0x000a      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTBbits
+0x000b      0x00000000            0  0x000a RELOC_F              _PORTBbits
+0x000c      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x000d      0x00000000            0  0x000a RELOC_F              _flag1
+0x000e      0x00000000            0  0x0001 RELOC_CALL           _RedFlash
+0x0010      0x00000000            0  0x0006 RELOC_BANKSEL        _Time_500MS
+0x0011      0x00000000            0  0x000a RELOC_F              _Time_500MS
+0x0013      0x00000000            0  0x0002 RELOC_GOTO           _00151_DS_
+0x0014      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTBbits
+0x0015      0x00000000            0  0x000a RELOC_F              _PORTBbits
+0x0016      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear
+0x0017      0x00000000            0  0x000a RELOC_F              _Gear
+0x0019      0x00000000            0  0x0006 RELOC_BANKSEL        _Key_Mode
+0x001a      0x00000000            0  0x000a RELOC_F              _Key_Mode
+0x001c      0x00000000            0  0x0002 RELOC_GOTO           _00002_DS_
+0x001d      0x00000000            0  0x000a RELOC_F              _Key_Mode
+0x001e      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear
+0x001f      0x00000000            0  0x000a RELOC_F              _Gear
+0x0020      0x00000000            0  0x000a RELOC_F              _Gear
+0x0023      0x00000000            0  0x000a RELOC_F              _Gear
+0x0024      0x00000000            0  0x0006 RELOC_BANKSEL        _time_2ms
+0x0025      0x00000000            0  0x000a RELOC_F              _time_2ms
+0x0026      0x00000000            0  0x0006 RELOC_BANKSEL        _Time_500MS
+0x0027      0x00000000            0  0x000a RELOC_F              _Time_500MS
+0x0028      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear
+0x0029      0x00000000            0  0x000a RELOC_F              _Gear
+0x002c      0x00000000            0  0x0002 RELOC_GOTO           _00001_DS_
+0x002d      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x002e      0x00000000            0  0x000a RELOC_F              _flag1
+0x002f      0x00000000            0  0x0002 RELOC_GOTO           _00001_DS_
+0x0030      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTBbits
+0x0031      0x00000000            0  0x000a RELOC_F              _PORTBbits
+0x0033      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear
+0x0034      0x00000000            0  0x000a RELOC_F              _Gear
+0x0036      0x00000000            0  0x0002 RELOC_GOTO           _00002_DS_
+0x0037      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTBbits
+0x0038      0x00000000            0  0x000a RELOC_F              _PORTBbits
+
+Line Number Table
+Line      Address     Symbol
+857       0x0000      main.asm
+858       0x0001      main.asm
+859       0x0002      main.asm
+860       0x0003      main.asm
+861       0x0004      main.asm
+863       0x0005      main.asm
+864       0x0006      main.asm
+866       0x0007      main.asm
+867       0x0008      main.asm
+868       0x0009      main.asm
+870       0x000a      main.asm
+871       0x000b      main.asm
+873       0x000c      main.asm
+874       0x000d      main.asm
+876       0x000e      main.asm
+880       0x000f      main.asm
+881       0x0010      main.asm
+882       0x0011      main.asm
+883       0x0012      main.asm
+884       0x0013      main.asm
+887       0x0014      main.asm
+888       0x0015      main.asm
+890       0x0016      main.asm
+891       0x0017      main.asm
+894       0x0018      main.asm
+895       0x0019      main.asm
+896       0x001a      main.asm
+897       0x001b      main.asm
+898       0x001c      main.asm
+900       0x001d      main.asm
+902       0x001e      main.asm
+903       0x001f      main.asm
+905       0x0020      main.asm
+907       0x0021      main.asm
+909       0x0022      main.asm
+910       0x0023      main.asm
+911       0x0024      main.asm
+912       0x0025      main.asm
+914       0x0026      main.asm
+915       0x0027      main.asm
+917       0x0028      main.asm
+918       0x0029      main.asm
+919       0x002a      main.asm
+920       0x002b      main.asm
+922       0x002c      main.asm
+924       0x002d      main.asm
+925       0x002e      main.asm
+926       0x002f      main.asm
+928       0x0030      main.asm
+929       0x0031      main.asm
+931       0x0032      main.asm
+933       0x0033      main.asm
+934       0x0034      main.asm
+935       0x0035      main.asm
+936       0x0036      main.asm
+937       0x0037      main.asm
+938       0x0038      main.asm
+940       0x0039      main.asm
+
+Section Header
+Name                    S_main__RedFlash
+Physical address        0
+Virtual address         0
+Size of Section         52
+Number of Relocations   20
+Number of Line Numbers  26
+Flags                   0x20
+  Executable code.
+
+Data
+0000:  0401  movlw   0x01
+0001:  0000  nop
+0002:  1c00  andwf   0x00, 0x0
+0003:  0000  nop
+0004:  1980  movwf   0x00
+0005:  1500  rrf     0x00, 0x0
+0006:  3403  btfsc   0x03, 0x0
+0007:  2000  goto    0x0000
+0008:  0000  nop
+0009:  3e00  bcf     0x00, 0x4
+000a:  3003  btfss   0x03, 0x0
+000b:  2000  goto    0x0000
+000c:  0000  nop
+000d:  3a00  bsf     0x00, 0x4
+000e:  0409  movlw   0x09
+000f:  0000  nop
+0010:  1b00  subwf   0x00, 0x0
+0011:  3003  btfss   0x03, 0x0
+0012:  2000  goto    0x0000
+0013:  0000  nop
+0014:  3c00  bcf     0x00, 0x0
+0015:  0000  nop
+0016:  1880  clrf    0x00
+0017:  0000  nop
+0018:  1880  clrf    0x00
+0019:  0002  return
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0001      0x00000000            0  0x0006 RELOC_BANKSEL        _Red_Flash
+0x0002      0x00000000            0  0x000a RELOC_F              _Red_Flash
+0x0003      0x00000000            0  0x0006 RELOC_BANKSEL        r0x101B
+0x0004      0x00000000            0  0x000a RELOC_F              r0x101B
+0x0005      0x00000000            0  0x000a RELOC_F              r0x101B
+0x0007      0x00000000            0  0x0002 RELOC_GOTO           _00003_DS_
+0x0008      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTAbits
+0x0009      0x00000000            0  0x000a RELOC_F              _PORTAbits
+0x000b      0x00000000            0  0x0002 RELOC_GOTO           _00004_DS_
+0x000c      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTAbits
+0x000d      0x00000000            0  0x000a RELOC_F              _PORTAbits
+0x000f      0x00000000            0  0x0006 RELOC_BANKSEL        _Red_Flash
+0x0010      0x00000000            0  0x000a RELOC_F              _Red_Flash
+0x0012      0x00000000            0  0x0002 RELOC_GOTO           _00141_DS_
+0x0013      0x00000000            0  0x0006 RELOC_BANKSEL        _flag1
+0x0014      0x00000000            0  0x000a RELOC_F              _flag1
+0x0015      0x00000000            0  0x0006 RELOC_BANKSEL        _Red_Flash
+0x0016      0x00000000            0  0x000a RELOC_F              _Red_Flash
+0x0017      0x00000000            0  0x0006 RELOC_BANKSEL        _Gear
+0x0018      0x00000000            0  0x000a RELOC_F              _Gear
+
+Line Number Table
+Line      Address     Symbol
+953       0x0000      main.asm
+954       0x0001      main.asm
+955       0x0002      main.asm
+956       0x0003      main.asm
+957       0x0004      main.asm
+958       0x0005      main.asm
+959       0x0006      main.asm
+960       0x0007      main.asm
+961       0x0008      main.asm
+962       0x0009      main.asm
+964       0x000a      main.asm
+965       0x000b      main.asm
+966       0x000c      main.asm
+967       0x000d      main.asm
+971       0x000e      main.asm
+972       0x000f      main.asm
+973       0x0010      main.asm
+974       0x0011      main.asm
+975       0x0012      main.asm
+978       0x0013      main.asm
+979       0x0014      main.asm
+981       0x0015      main.asm
+982       0x0016      main.asm
+984       0x0017      main.asm
+985       0x0018      main.asm
+987       0x0019      main.asm
+
+Section Header
+Name                    S_main__KeyScan
+Physical address        0
+Virtual address         0
+Size of Section         52
+Number of Relocations   19
+Number of Line Numbers  26
+Flags                   0x20
+  Executable code.
+
+Data
+0000:  0000  nop
+0001:  1380  incf    0x00, 0x1
+0002:  0000  nop
+0003:  3280  btfss   0x00, 0x5
+0004:  2000  goto    0x0000
+0005:  0432  movlw   0x32
+0006:  0000  nop
+0007:  1b00  subwf   0x00, 0x0
+0008:  3003  btfss   0x03, 0x0
+0009:  2000  goto    0x0000
+000a:  0401  movlw   0x01
+000b:  0000  nop
+000c:  1980  movwf   0x00
+000d:  0000  nop
+000e:  1880  clrf    0x00
+000f:  2000  goto    0x0000
+0010:  0000  nop
+0011:  1880  clrf    0x00
+0012:  04c8  movlw   0xc8
+0013:  0000  nop
+0014:  1b00  subwf   0x00, 0x0
+0015:  3003  btfss   0x03, 0x0
+0016:  2000  goto    0x0000
+0017:  04c8  movlw   0xc8
+0018:  1980  movwf   0x00
+0019:  0002  return
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0000      0x00000000            0  0x0006 RELOC_BANKSEL        _key_press_time
+0x0001      0x00000000            0  0x000a RELOC_F              _key_press_time
+0x0002      0x00000000            0  0x0006 RELOC_BANKSEL        _PORTBbits
+0x0003      0x00000000            0  0x000a RELOC_F              _PORTBbits
+0x0004      0x00000000            0  0x0002 RELOC_GOTO           _00130_DS_
+0x0006      0x00000000            0  0x0006 RELOC_BANKSEL        _key_press_time
+0x0007      0x00000000            0  0x000a RELOC_F              _key_press_time
+0x0009      0x00000000            0  0x0002 RELOC_GOTO           _00128_DS_
+0x000b      0x00000000            0  0x0006 RELOC_BANKSEL        _Key_Mode
+0x000c      0x00000000            0  0x000a RELOC_F              _Key_Mode
+0x000d      0x00000000            0  0x0006 RELOC_BANKSEL        _key_press_time
+0x000e      0x00000000            0  0x000a RELOC_F              _key_press_time
+0x000f      0x00000000            0  0x0002 RELOC_GOTO           _00131_DS_
+0x0010      0x00000000            0  0x0006 RELOC_BANKSEL        _Time_Seep
+0x0011      0x00000000            0  0x000a RELOC_F              _Time_Seep
+0x0013      0x00000000            0  0x0006 RELOC_BANKSEL        _key_press_time
+0x0014      0x00000000            0  0x000a RELOC_F              _key_press_time
+0x0016      0x00000000            0  0x0002 RELOC_GOTO           _00134_DS_
+0x0018      0x00000000            0  0x000a RELOC_F              _key_press_time
+
+Line Number Table
+Line      Address     Symbol
+999       0x0000      main.asm
+1000      0x0001      main.asm
+1002      0x0002      main.asm
+1003      0x0003      main.asm
+1004      0x0004      main.asm
+1007      0x0005      main.asm
+1008      0x0006      main.asm
+1009      0x0007      main.asm
+1010      0x0008      main.asm
+1011      0x0009      main.asm
+1014      0x000a      main.asm
+1015      0x000b      main.asm
+1016      0x000c      main.asm
+1019      0x000d      main.asm
+1020      0x000e      main.asm
+1021      0x000f      main.asm
+1024      0x0010      main.asm
+1025      0x0011      main.asm
+1029      0x0012      main.asm
+1030      0x0013      main.asm
+1031      0x0014      main.asm
+1032      0x0015      main.asm
+1033      0x0016      main.asm
+1036      0x0017      main.asm
+1037      0x0018      main.asm
+1039      0x0019      main.asm
+
+Section Header
+Name                    S_main__adc_get
+Physical address        0
+Virtual address         0
+Size of Section         172
+Number of Relocations   72
+Number of Line Numbers  86
+Flags                   0x20
+  Executable code.
+
+Data
+0000:  0000  nop
+0001:  1880  clrf    0x00
+0002:  1880  clrf    0x00
+0003:  0000  nop
+0004:  1880  clrf    0x00
+0005:  1880  clrf    0x00
+0006:  0450  movlw   0x50
+0007:  0000  nop
+0008:  1980  movwf   0x00
+0009:  1880  clrf    0x00
+000a:  0415  movlw   0x15
+000b:  0000  nop
+000c:  1980  movwf   0x00
+000d:  0000  nop
+000e:  1880  clrf    0x00
+000f:  0423  movlw   0x23
+0010:  2800  call    0x0000
+0011:  0000  nop
+0012:  3880  bsf     0x00, 0x1
+0013:  0423  movlw   0x23
+0014:  2800  call    0x0000
+0015:  0000  nop
+0016:  3480  btfsc   0x00, 0x1
+0017:  2000  goto    0x0000
+0018:  1100  movf    0x00, 0x0
+0019:  0000  nop
+001a:  1980  movwf   0x00
+001b:  1880  clrf    0x00
+001c:  1700  swapf   0x00, 0x0
+001d:  0ef0  andlw   0xf0
+001e:  0000  nop
+001f:  1980  movwf   0x00
+0020:  0000  nop
+0021:  1700  swapf   0x00, 0x0
+0022:  0000  nop
+0023:  1980  movwf   0x00
+0024:  0e0f  andlw   0x0f
+0025:  1d80  iorwf   0x00, 0x1
+0026:  1f80  xorwf   0x00, 0x1
+0027:  0000  nop
+0028:  1700  swapf   0x00, 0x0
+0029:  0e0f  andlw   0x0f
+002a:  0000  nop
+002b:  1980  movwf   0x00
+002c:  1d00  iorwf   0x00, 0x0
+002d:  0000  nop
+002e:  1980  movwf   0x00
+002f:  0000  nop
+0030:  1100  movf    0x00, 0x0
+0031:  0000  nop
+0032:  1980  movwf   0x00
+0033:  0000  nop
+0034:  1100  movf    0x00, 0x0
+0035:  0000  nop
+0036:  1e00  addwf   0x00, 0x0
+0037:  0000  nop
+0038:  1980  movwf   0x00
+0039:  0000  nop
+003a:  1100  movf    0x00, 0x0
+003b:  3403  btfsc   0x03, 0x0
+003c:  1300  incf    0x00, 0x0
+003d:  3503  btfsc   0x03, 0x2
+003e:  2000  goto    0x0000
+003f:  0000  nop
+0040:  1e80  addwf   0x00, 0x1
+0041:  0000  nop
+0042:  1880  clrf    0x00
+0043:  1880  clrf    0x00
+0044:  0000  nop
+0045:  1380  incf    0x00, 0x1
+0046:  0410  movlw   0x10
+0047:  1b00  subwf   0x00, 0x0
+0048:  3003  btfss   0x03, 0x0
+0049:  2000  goto    0x0000
+004a:  0000  nop
+004b:  1700  swapf   0x00, 0x0
+004c:  0e0f  andlw   0x0f
+004d:  1980  movwf   0x00
+004e:  1700  swapf   0x00, 0x0
+004f:  1980  movwf   0x00
+0050:  0ef0  andlw   0xf0
+0051:  1d80  iorwf   0x00, 0x1
+0052:  1f80  xorwf   0x00, 0x1
+0053:  0000  nop
+0054:  1880  clrf    0x00
+0055:  0002  return
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0000      0x00000000            0  0x0006 RELOC_BANKSEL        _databuf
+0x0001      0x00000000            0  0x000a RELOC_F              _databuf
+0x0002      0x00000001            1  0x000a RELOC_F              _databuf
+0x0003      0x00000000            0  0x0006 RELOC_BANKSEL        _adc_value
+0x0004      0x00000000            0  0x000a RELOC_F              _adc_value
+0x0005      0x00000001            1  0x000a RELOC_F              _adc_value
+0x0007      0x00000000            0  0x0006 RELOC_BANKSEL        _ADCON1
+0x0008      0x00000000            0  0x000a RELOC_F              _ADCON1
+0x0009      0x00000000            0  0x000a RELOC_F              _ADCKCS
+0x000b      0x00000000            0  0x0006 RELOC_BANKSEL        _ADCON0
+0x000c      0x00000000            0  0x000a RELOC_F              _ADCON0
+0x000d      0x00000000            0  0x0006 RELOC_BANKSEL        r0x101D
+0x000e      0x00000000            0  0x000a RELOC_F              r0x101D
+0x0010      0x00000000            0  0x0001 RELOC_CALL           _DelayUs2x
+0x0011      0x00000000            0  0x0006 RELOC_BANKSEL        _ADCON0bits
+0x0012      0x00000000            0  0x000a RELOC_F              _ADCON0bits
+0x0014      0x00000000            0  0x0001 RELOC_CALL           _DelayUs2x
+0x0015      0x00000000            0  0x0006 RELOC_BANKSEL        _ADCON0bits
+0x0016      0x00000000            0  0x000a RELOC_F              _ADCON0bits
+0x0017      0x00000000            0  0x0002 RELOC_GOTO           _00118_DS_
+0x0018      0x00000000            0  0x000a RELOC_F              _ADRESH
+0x0019      0x00000000            0  0x0006 RELOC_BANKSEL        _databuf
+0x001a      0x00000000            0  0x000a RELOC_F              _databuf
+0x001b      0x00000001            1  0x000a RELOC_F              _databuf
+0x001c      0x00000001            1  0x000a RELOC_F              _databuf
+0x001e      0x00000000            0  0x0006 RELOC_BANKSEL        r0x101E
+0x001f      0x00000000            0  0x000a RELOC_F              r0x101E
+0x0020      0x00000000            0  0x0006 RELOC_BANKSEL        _databuf
+0x0021      0x00000000            0  0x000a RELOC_F              _databuf
+0x0022      0x00000000            0  0x0006 RELOC_BANKSEL        r0x101F
+0x0023      0x00000000            0  0x000a RELOC_F              r0x101F
+0x0025      0x00000000            0  0x000a RELOC_F              r0x101E
+0x0026      0x00000000            0  0x000a RELOC_F              r0x101F
+0x0027      0x00000000            0  0x0006 RELOC_BANKSEL        _ADRESL
+0x0028      0x00000000            0  0x000a RELOC_F              _ADRESL
+0x002a      0x00000000            0  0x0006 RELOC_BANKSEL        r0x1021
+0x002b      0x00000000            0  0x000a RELOC_F              r0x1021
+0x002c      0x00000000            0  0x000a RELOC_F              r0x101F
+0x002d      0x00000000            0  0x0006 RELOC_BANKSEL        _databuf
+0x002e      0x00000000            0  0x000a RELOC_F              _databuf
+0x002f      0x00000000            0  0x0006 RELOC_BANKSEL        r0x101E
+0x0030      0x00000000            0  0x000a RELOC_F              r0x101E
+0x0031      0x00000000            0  0x0006 RELOC_BANKSEL        _databuf
+0x0032      0x00000001            1  0x000a RELOC_F              _databuf
+0x0033      0x00000000            0  0x0006 RELOC_BANKSEL        _adc_value
+0x0034      0x00000000            0  0x000a RELOC_F              _adc_value
+0x0035      0x00000000            0  0x0006 RELOC_BANKSEL        _databuf
+0x0036      0x00000000            0  0x000a RELOC_F              _databuf
+0x0037      0x00000000            0  0x0006 RELOC_BANKSEL        _adc_value
+0x0038      0x00000000            0  0x000a RELOC_F              _adc_value
+0x0039      0x00000000            0  0x0006 RELOC_BANKSEL        _databuf
+0x003a      0x00000001            1  0x000a RELOC_F              _databuf
+0x003c      0x00000001            1  0x000a RELOC_F              _databuf
+0x003e      0x00000000            0  0x0002 RELOC_GOTO           _00005_DS_
+0x003f      0x00000000            0  0x0006 RELOC_BANKSEL        _adc_value
+0x0040      0x00000001            1  0x000a RELOC_F              _adc_value
+0x0041      0x00000000            0  0x0006 RELOC_BANKSEL        _databuf
+0x0042      0x00000000            0  0x000a RELOC_F              _databuf
+0x0043      0x00000001            1  0x000a RELOC_F              _databuf
+0x0044      0x00000000            0  0x0006 RELOC_BANKSEL        r0x101D
+0x0045      0x00000000            0  0x000a RELOC_F              r0x101D
+0x0047      0x00000000            0  0x000a RELOC_F              r0x101D
+0x0049      0x00000000            0  0x0002 RELOC_GOTO           _00122_DS_
+0x004a      0x00000000            0  0x0006 RELOC_BANKSEL        _adc_value
+0x004b      0x00000000            0  0x000a RELOC_F              _adc_value
+0x004d      0x00000000            0  0x000a RELOC_F              _adc_value
+0x004e      0x00000001            1  0x000a RELOC_F              _adc_value
+0x004f      0x00000001            1  0x000a RELOC_F              _adc_value
+0x0051      0x00000000            0  0x000a RELOC_F              _adc_value
+0x0052      0x00000001            1  0x000a RELOC_F              _adc_value
+0x0053      0x00000000            0  0x0006 RELOC_BANKSEL        _ADCON0
+0x0054      0x00000000            0  0x000a RELOC_F              _ADCON0
+
+Line Number Table
+Line      Address     Symbol
+1063      0x0000      main.asm
+1064      0x0001      main.asm
+1065      0x0002      main.asm
+1067      0x0003      main.asm
+1068      0x0004      main.asm
+1069      0x0005      main.asm
+1071      0x0006      main.asm
+1072      0x0007      main.asm
+1073      0x0008      main.asm
+1075      0x0009      main.asm
+1077      0x000a      main.asm
+1078      0x000b      main.asm
+1079      0x000c      main.asm
+1081      0x000d      main.asm
+1082      0x000e      main.asm
+1085      0x000f      main.asm
+1086      0x0010      main.asm
+1088      0x0011      main.asm
+1089      0x0012      main.asm
+1091      0x0013      main.asm
+1092      0x0014      main.asm
+1095      0x0015      main.asm
+1096      0x0016      main.asm
+1097      0x0017      main.asm
+1099      0x0018      main.asm
+1100      0x0019      main.asm
+1101      0x001a      main.asm
+1102      0x001b      main.asm
+1104      0x001c      main.asm
+1105      0x001d      main.asm
+1106      0x001e      main.asm
+1107      0x001f      main.asm
+1108      0x0020      main.asm
+1109      0x0021      main.asm
+1110      0x0022      main.asm
+1111      0x0023      main.asm
+1112      0x0024      main.asm
+1113      0x0025      main.asm
+1114      0x0026      main.asm
+1115      0x0027      main.asm
+1116      0x0028      main.asm
+1117      0x0029      main.asm
+1119      0x002a      main.asm
+1120      0x002b      main.asm
+1121      0x002c      main.asm
+1122      0x002d      main.asm
+1123      0x002e      main.asm
+1124      0x002f      main.asm
+1125      0x0030      main.asm
+1126      0x0031      main.asm
+1127      0x0032      main.asm
+1129      0x0033      main.asm
+1130      0x0034      main.asm
+1131      0x0035      main.asm
+1132      0x0036      main.asm
+1133      0x0037      main.asm
+1134      0x0038      main.asm
+1135      0x0039      main.asm
+1136      0x003a      main.asm
+1137      0x003b      main.asm
+1138      0x003c      main.asm
+1139      0x003d      main.asm
+1140      0x003e      main.asm
+1141      0x003f      main.asm
+1142      0x0040      main.asm
+1145      0x0041      main.asm
+1146      0x0042      main.asm
+1147      0x0043      main.asm
+1149      0x0044      main.asm
+1150      0x0045      main.asm
+1152      0x0046      main.asm
+1153      0x0047      main.asm
+1154      0x0048      main.asm
+1155      0x0049      main.asm
+1158      0x004a      main.asm
+1159      0x004b      main.asm
+1160      0x004c      main.asm
+1161      0x004d      main.asm
+1162      0x004e      main.asm
+1163      0x004f      main.asm
+1164      0x0050      main.asm
+1165      0x0051      main.asm
+1166      0x0052      main.asm
+1168      0x0053      main.asm
+1169      0x0054      main.asm
+1170      0x0055      main.asm
+
+Section Header
+Name                    S_main__DelayMs
+Physical address        0
+Virtual address         0
+Size of Section         46
+Number of Relocations   17
+Number of Line Numbers  23
+Flags                   0x20
+  Executable code.
+
+Data
+0000:  0000  nop
+0001:  1980  movwf   0x00
+0002:  1100  movf    0x00, 0x0
+0003:  1980  movwf   0x00
+0004:  0000  nop
+0005:  1100  movf    0x00, 0x0
+0006:  1980  movwf   0x00
+0007:  1100  movf    0x00, 0x0
+0008:  1980  movwf   0x00
+0009:  04ff  movlw   0xff
+000a:  1e80  addwf   0x00, 0x1
+000b:  3003  btfss   0x03, 0x0
+000c:  1a80  decf    0x00, 0x1
+000d:  1100  movf    0x00, 0x0
+000e:  1d00  iorwf   0x00, 0x0
+000f:  3503  btfsc   0x03, 0x2
+0010:  2000  goto    0x0000
+0011:  0478  movlw   0x78
+0012:  2800  call    0x0000
+0013:  047d  movlw   0x7d
+0014:  2800  call    0x0000
+0015:  2000  goto    0x0000
+0016:  0002  return
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0000      0x00000000            0  0x0006 RELOC_BANKSEL        r0x101D
+0x0001      0x00000000            0  0x000a RELOC_F              r0x101D
+0x0002      0x00000000            0  0x000a RELOC_F              STK00
+0x0003      0x00000000            0  0x000a RELOC_F              r0x101E
+0x0004      0x00000000            0  0x0006 RELOC_BANKSEL        r0x101E
+0x0005      0x00000000            0  0x000a RELOC_F              r0x101E
+0x0006      0x00000000            0  0x000a RELOC_F              r0x101F
+0x0007      0x00000000            0  0x000a RELOC_F              r0x101D
+0x0008      0x00000000            0  0x000a RELOC_F              r0x1020
+0x000a      0x00000000            0  0x000a RELOC_F              r0x101E
+0x000c      0x00000000            0  0x000a RELOC_F              r0x101D
+0x000d      0x00000000            0  0x000a RELOC_F              r0x101F
+0x000e      0x00000000            0  0x000a RELOC_F              r0x1020
+0x0010      0x00000000            0  0x0002 RELOC_GOTO           _00113_DS_
+0x0012      0x00000000            0  0x0001 RELOC_CALL           _DelayUs2x
+0x0014      0x00000000            0  0x0001 RELOC_CALL           _DelayUs2x
+0x0015      0x00000000            0  0x0002 RELOC_GOTO           _00110_DS_
+
+Line Number Table
+Line      Address     Symbol
+1193      0x0000      main.asm
+1194      0x0001      main.asm
+1195      0x0002      main.asm
+1196      0x0003      main.asm
+1199      0x0004      main.asm
+1200      0x0005      main.asm
+1201      0x0006      main.asm
+1202      0x0007      main.asm
+1203      0x0008      main.asm
+1204      0x0009      main.asm
+1205      0x000a      main.asm
+1206      0x000b      main.asm
+1207      0x000c      main.asm
+1208      0x000d      main.asm
+1209      0x000e      main.asm
+1210      0x000f      main.asm
+1211      0x0010      main.asm
+1213      0x0011      main.asm
+1214      0x0012      main.asm
+1216      0x0013      main.asm
+1217      0x0014      main.asm
+1218      0x0015      main.asm
+1220      0x0016      main.asm
+
+Section Header
+Name                    S_main__DelayUs2x
+Physical address        0
+Virtual address         0
+Size of Section         20
+Number of Relocations   8
+Number of Line Numbers  10
+Flags                   0x20
+  Executable code.
+
+Data
+0000:  0000  nop
+0001:  1980  movwf   0x00
+0002:  0000  nop
+0003:  1a00  decf    0x00, 0x0
+0004:  1980  movwf   0x00
+0005:  1980  movwf   0x00
+0006:  1100  movf    0x00, 0x0
+0007:  3103  btfss   0x03, 0x2
+0008:  2000  goto    0x0000
+0009:  0002  return
+
+Relocations Table
+Address     Offset      Offset       Type                        Symbol
+            (hex)       (dec)
+0x0000      0x00000000            0  0x0006 RELOC_BANKSEL        r0x101B
+0x0001      0x00000000            0  0x000a RELOC_F              r0x101B
+0x0002      0x00000000            0  0x0006 RELOC_BANKSEL        r0x101B
+0x0003      0x00000000            0  0x000a RELOC_F              r0x101B
+0x0004      0x00000000            0  0x000a RELOC_F              r0x101C
+0x0005      0x00000000            0  0x000a RELOC_F              r0x101B
+0x0006      0x00000000            0  0x000a RELOC_F              r0x101C
+0x0008      0x00000000            0  0x0002 RELOC_GOTO           _00105_DS_
+
+Line Number Table
+Line      Address     Symbol
+1235      0x0000      main.asm
+1236      0x0001      main.asm
+1239      0x0002      main.asm
+1240      0x0003      main.asm
+1241      0x0004      main.asm
+1242      0x0005      main.asm
+1243      0x0006      main.asm
+1244      0x0007      main.asm
+1245      0x0008      main.asm
+1246      0x0009      main.asm
+
+Symbol Table
+Idx  Name                     Section          Value      Type     DT           Class     NumAux
+0001 .file                    DEBUG            0x00000000 T_NULL   DT_NON       C_FILE    1
+       file          = main.asm
+       line included = 0
+       flags         = 0x00000000
+0003 .file                    DEBUG            0x00000000 T_NULL   DT_NON       C_FILE    1
+       file          = /usr/local/share/gputils/header/p18p110l.inc
+       line included = 10
+       flags         = 0x00000000
+0005 .list                    DEBUG            0x00000001 T_NULL   DT_NON       C_LIST    0
+0006 .nolist                  DEBUG            0x0000000a T_NULL   DT_NON       C_LIST    0
+0007 .list                    DEBUG            0x000001ba T_NULL   DT_NON       C_LIST    0
+0008 .eof                     DEBUG            0x00000000 T_NULL   DT_NON       C_EOF     0
+0009 _inital                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0010 _sysinitial              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0011 _STATUSbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0012 _PORTAbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0013 _PORTBbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0014 _INTCONbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0015 _PIR1bits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0016 _PIR2bits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0017 _T1CONbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0018 _T2CONbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0019 _WPUBbits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0020 _IOCBbits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0021 _CCP1CONbits             UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0022 _PR1CONbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0023 _CCP2CONbits             UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0024 _ADCON0bits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0025 _OPTIONbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0026 _TRISAbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0027 _TRISBbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0028 _ADCKCSbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0029 _PIE1bits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0030 _PIE2bits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0031 _PCONbits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0032 _T1GCONbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0033 _OSCCONbits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0034 _WPUAbits                UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0035 _PMCONbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0036 _ANSELbits               UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0037 _ADCON1bits              UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0038 _INDF                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0039 _T0                      UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0040 _PCL                     UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0041 _STATUS                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0042 _FSR                     UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0043 _PORTA                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0044 _PORTB                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0045 _PCLATH                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0046 _INTCON                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0047 _PIR1                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0048 _PIR2                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0049 _T1L                     UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0050 _T1H                     UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0051 _T1CON                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0052 _T2                      UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0053 _T2CON                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0054 _WPUB                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0055 _IOCB                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0056 _CCPR1L                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0057 _CCPR1H                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0058 _CCP1CON                 UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0059 _PR1L                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0060 _PR1CON                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0061 _CCPR2L                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0062 _CCPR2H                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0063 _CCP2CON                 UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0064 _ADRESH                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0065 _ADCON0                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0066 _OPTION                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0067 _TRISA                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0068 _TRISB                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0069 _ADCKCS                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0070 _PIE1                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0071 _PIE2                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0072 _PCON                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0073 _T1GCON                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0074 _OSCCON                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0075 _PR2                     UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0076 _WPUA                    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0077 _PMDATL                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0078 _PMDATH                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0079 _PMADRL                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0080 _PMADRH                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0081 _PMCON                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0082 _ANSEL                   UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0083 _ADRESL                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0084 _ADCON1                  UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0085 ___sdcc_saved_fsr        UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0086 __sdcc_gsinit_startup    UNDEFINED        0x00000000 T_NULL   DT_NON       C_EXT     0
+0087 sharebank                sharebank        0x00000040 T_NULL   DT_NON       C_SECTION 1
+       length                 = 16
+       number of relocations  = 0
+       number of line numbers = 0
+0089 PSAVE                    sharebank        0x00000040 T_NULL   DT_NON       C_EXT     0
+0090 SSAVE                    sharebank        0x00000041 T_NULL   DT_NON       C_EXT     0
+0091 WSAVE                    sharebank        0x00000042 T_NULL   DT_NON       C_EXT     0
+0092 STK12                    sharebank        0x00000043 T_NULL   DT_NON       C_EXT     0
+0093 STK11                    sharebank        0x00000044 T_NULL   DT_NON       C_EXT     0
+0094 STK10                    sharebank        0x00000045 T_NULL   DT_NON       C_EXT     0
+0095 STK09                    sharebank        0x00000046 T_NULL   DT_NON       C_EXT     0
+0096 STK08                    sharebank        0x00000047 T_NULL   DT_NON       C_EXT     0
+0097 STK07                    sharebank        0x00000048 T_NULL   DT_NON       C_EXT     0
+0098 STK06                    sharebank        0x00000049 T_NULL   DT_NON       C_EXT     0
+0099 STK05                    sharebank        0x0000004a T_NULL   DT_NON       C_EXT     0
+0100 STK04                    sharebank        0x0000004b T_NULL   DT_NON       C_EXT     0
+0101 STK03                    sharebank        0x0000004c T_NULL   DT_NON       C_EXT     0
+0102 STK02                    sharebank        0x0000004d T_NULL   DT_NON       C_EXT     0
+0103 STK01                    sharebank        0x0000004e T_NULL   DT_NON       C_EXT     0
+0104 STK00                    sharebank        0x0000004f T_NULL   DT_NON       C_EXT     0
+0105 UD_main_0                UD_main_0        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 2
+       number of relocations  = 0
+       number of line numbers = 0
+0107 _adc_value               UD_main_0        0x00000000 T_NULL   DT_NON       C_EXT     0
+0108 UD_main_1                UD_main_1        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 2
+       number of relocations  = 0
+       number of line numbers = 0
+0110 _databuf                 UD_main_1        0x00000000 T_NULL   DT_NON       C_EXT     0
+0111 UD_main_2                UD_main_2        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 1
+       number of relocations  = 0
+       number of line numbers = 0
+0113 _Pwm1_Count              UD_main_2        0x00000000 T_NULL   DT_NON       C_EXT     0
+0114 UD_main_3                UD_main_3        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 1
+       number of relocations  = 0
+       number of line numbers = 0
+0116 _Pwm2_Count              UD_main_3        0x00000000 T_NULL   DT_NON       C_EXT     0
+0117 UD_main_4                UD_main_4        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 1
+       number of relocations  = 0
+       number of line numbers = 0
+0119 _Gear4_temp              UD_main_4        0x00000000 T_NULL   DT_NON       C_EXT     0
+0120 UD_main_5                UD_main_5        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 1
+       number of relocations  = 0
+       number of line numbers = 0
+0122 _Gear                    UD_main_5        0x00000000 T_NULL   DT_NON       C_EXT     0
+0123 UD_main_6                UD_main_6        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 1
+       number of relocations  = 0
+       number of line numbers = 0
+0125 _time_2ms                UD_main_6        0x00000000 T_NULL   DT_NON       C_EXT     0
+0126 UD_main_7                UD_main_7        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 1
+       number of relocations  = 0
+       number of line numbers = 0
+0128 _Time_500MS              UD_main_7        0x00000000 T_NULL   DT_NON       C_EXT     0
+0129 UD_main_8                UD_main_8        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 1
+       number of relocations  = 0
+       number of line numbers = 0
+0131 _key_press_time          UD_main_8        0x00000000 T_NULL   DT_NON       C_EXT     0
+0132 UD_main_9                UD_main_9        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 1
+       number of relocations  = 0
+       number of line numbers = 0
+0134 _Key_Mode                UD_main_9        0x00000000 T_NULL   DT_NON       C_EXT     0
+0135 UD_main_10               UD_main_10       0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 1
+       number of relocations  = 0
+       number of line numbers = 0
+0137 _flag1                   UD_main_10       0x00000000 T_NULL   DT_NON       C_EXT     0
+0138 UD_main_11               UD_main_11       0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 1
+       number of relocations  = 0
+       number of line numbers = 0
+0140 _flag2                   UD_main_11       0x00000000 T_NULL   DT_NON       C_EXT     0
+0141 UDL_main_0               UDL_main_0       0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 10
+       number of relocations  = 0
+       number of line numbers = 0
+0143 r0x101B                  UDL_main_0       0x00000000 T_NULL   DT_NON       C_STAT    0
+0144 r0x101C                  UDL_main_0       0x00000001 T_NULL   DT_NON       C_STAT    0
+0145 r0x101E                  UDL_main_0       0x00000002 T_NULL   DT_NON       C_STAT    0
+0146 r0x101D                  UDL_main_0       0x00000003 T_NULL   DT_NON       C_STAT    0
+0147 r0x101F                  UDL_main_0       0x00000004 T_NULL   DT_NON       C_STAT    0
+0148 r0x1020                  UDL_main_0       0x00000005 T_NULL   DT_NON       C_STAT    0
+0149 r0x1021                  UDL_main_0       0x00000006 T_NULL   DT_NON       C_STAT    0
+0150 r0x1023                  UDL_main_0       0x00000007 T_NULL   DT_NON       C_STAT    0
+0151 r0x1024                  UDL_main_0       0x00000008 T_NULL   DT_NON       C_STAT    0
+0152 r0x1025                  UDL_main_0       0x00000009 T_NULL   DT_NON       C_STAT    0
+0153 ID_main_0                ID_main_0        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 1
+       number of relocations  = 0
+       number of line numbers = 0
+0155 _Time_Seep               ID_main_0        0x00000000 T_NULL   DT_NON       C_EXT     0
+0156 ID_main_1                ID_main_1        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 5
+       number of relocations  = 0
+       number of line numbers = 0
+0158 _Pwm1_Duty_Ratio         ID_main_1        0x00000000 T_NULL   DT_NON       C_EXT     0
+0159 ID_main_2                ID_main_2        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 5
+       number of relocations  = 0
+       number of line numbers = 0
+0161 _Pwm2_Duty_Ratio         ID_main_2        0x00000000 T_NULL   DT_NON       C_EXT     0
+0162 ID_main_3                ID_main_3        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 1
+       number of relocations  = 0
+       number of line numbers = 0
+0164 _Red_Flash               ID_main_3        0x00000000 T_NULL   DT_NON       C_EXT     0
+0165 STARTUP                  STARTUP          0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 4
+       number of relocations  = 1
+       number of line numbers = 2
+0167 c_interrupt              c_interrupt      0x00000004 T_NULL   DT_NON       C_SECTION 1
+       length                 = 344
+       number of relocations  = 120
+       number of line numbers = 172
+0169 __sdcc_interrupt         c_interrupt      0x00000004 T_NULL   DT_NON       C_LABEL   0
+0170 _Intr                    c_interrupt      0x00000004 T_NULL   DT_NON       C_EXT     0
+0171 _00242_DS_               c_interrupt      0x00000014 T_NULL   DT_NON       C_LABEL   0
+0172 _00248_DS_               c_interrupt      0x00000040 T_NULL   DT_NON       C_LABEL   0
+0173 _00249_DS_               c_interrupt      0x00000042 T_NULL   DT_NON       C_LABEL   0
+0174 _00253_DS_               c_interrupt      0x00000063 T_NULL   DT_NON       C_LABEL   0
+0175 _00256_DS_               c_interrupt      0x00000065 T_NULL   DT_NON       C_LABEL   0
+0176 _00258_DS_               c_interrupt      0x0000007a T_NULL   DT_NON       C_LABEL   0
+0177 _00261_DS_               c_interrupt      0x0000007c T_NULL   DT_NON       C_LABEL   0
+0178 _00273_DS_               c_interrupt      0x0000008a T_NULL   DT_NON       C_LABEL   0
+0179 _00270_DS_               c_interrupt      0x00000093 T_NULL   DT_NON       C_LABEL   0
+0180 _00267_DS_               c_interrupt      0x0000009c T_NULL   DT_NON       C_LABEL   0
+0181 _00277_DS_               c_interrupt      0x000000a4 T_NULL   DT_NON       C_LABEL   0
+0182 END_OF_INTERRUPT         c_interrupt      0x000000af T_NULL   DT_NON       C_LABEL   0
+0183 code_main                code_main        0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 0
+       number of relocations  = 0
+       number of line numbers = 0
+0185 S_main__main             S_main__main     0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 50
+       number of relocations  = 21
+       number of line numbers = 25
+0187 _main                    S_main__main     0x00000000 T_NULL   DT_NON       C_EXT     0
+0188 _00236_DS_               S_main__main     0x0000000d T_NULL   DT_NON       C_LABEL   0
+0189 S_main__initValue        S_main__initValue 0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 40
+       number of relocations  = 18
+       number of line numbers = 20
+0191 _initValue               S_main__initValue 0x00000000 T_NULL   DT_NON       C_EXT     0
+0192 S_main__SleepMode        S_main__SleepMode 0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 84
+       number of relocations  = 35
+       number of line numbers = 42
+0194 _SleepMode               S_main__SleepMode 0x00000000 T_NULL   DT_NON       C_EXT     0
+0195 _00224_DS_               S_main__SleepMode 0x00000029 T_NULL   DT_NON       C_LABEL   0
+0196 S_main__batt_test        S_main__batt_test 0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 52
+       number of relocations  = 19
+       number of line numbers = 26
+0198 _batt_test               S_main__batt_test 0x00000000 T_NULL   DT_NON       C_EXT     0
+0199 _00217_DS_               S_main__batt_test 0x00000015 T_NULL   DT_NON       C_LABEL   0
+0200 _00203_DS_               S_main__batt_test 0x00000019 T_NULL   DT_NON       C_LABEL   0
+0201 S_main__ChIntput         S_main__ChIntput 0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 86
+       number of relocations  = 38
+       number of line numbers = 43
+0203 _ChIntput                S_main__ChIntput 0x00000000 T_NULL   DT_NON       C_EXT     0
+0204 _00168_DS_               S_main__ChIntput 0x00000010 T_NULL   DT_NON       C_LABEL   0
+0205 _00191_DS_               S_main__ChIntput 0x00000018 T_NULL   DT_NON       C_LABEL   0
+0206 _00170_DS_               S_main__ChIntput 0x0000001c T_NULL   DT_NON       C_LABEL   0
+0207 _00172_DS_               S_main__ChIntput 0x00000023 T_NULL   DT_NON       C_LABEL   0
+0208 _00175_DS_               S_main__ChIntput 0x00000028 T_NULL   DT_NON       C_LABEL   0
+0209 _00177_DS_               S_main__ChIntput 0x0000002a T_NULL   DT_NON       C_LABEL   0
+0210 S_main__AdjustGear       S_main__AdjustGear 0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 116
+       number of relocations  = 45
+       number of line numbers = 58
+0212 _AdjustGear              S_main__AdjustGear 0x00000000 T_NULL   DT_NON       C_EXT     0
+0213 _00147_DS_               S_main__AdjustGear 0x0000000f T_NULL   DT_NON       C_LABEL   0
+0214 _00151_DS_               S_main__AdjustGear 0x00000018 T_NULL   DT_NON       C_LABEL   0
+0215 _00001_DS_               S_main__AdjustGear 0x00000032 T_NULL   DT_NON       C_LABEL   0
+0216 _00002_DS_               S_main__AdjustGear 0x00000039 T_NULL   DT_NON       C_LABEL   0
+0217 S_main__RedFlash         S_main__RedFlash 0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 52
+       number of relocations  = 20
+       number of line numbers = 26
+0219 _RedFlash                S_main__RedFlash 0x00000000 T_NULL   DT_NON       C_EXT     0
+0220 _00003_DS_               S_main__RedFlash 0x0000000a T_NULL   DT_NON       C_LABEL   0
+0221 _00004_DS_               S_main__RedFlash 0x0000000e T_NULL   DT_NON       C_LABEL   0
+0222 _00141_DS_               S_main__RedFlash 0x00000019 T_NULL   DT_NON       C_LABEL   0
+0223 S_main__KeyScan          S_main__KeyScan  0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 52
+       number of relocations  = 19
+       number of line numbers = 26
+0225 _KeyScan                 S_main__KeyScan  0x00000000 T_NULL   DT_NON       C_EXT     0
+0226 _00128_DS_               S_main__KeyScan  0x0000000d T_NULL   DT_NON       C_LABEL   0
+0227 _00130_DS_               S_main__KeyScan  0x00000010 T_NULL   DT_NON       C_LABEL   0
+0228 _00131_DS_               S_main__KeyScan  0x00000012 T_NULL   DT_NON       C_LABEL   0
+0229 _00134_DS_               S_main__KeyScan  0x00000019 T_NULL   DT_NON       C_LABEL   0
+0230 S_main__adc_get          S_main__adc_get  0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 172
+       number of relocations  = 72
+       number of line numbers = 86
+0232 _adc_get                 S_main__adc_get  0x00000000 T_NULL   DT_NON       C_EXT     0
+0233 _00122_DS_               S_main__adc_get  0x0000000f T_NULL   DT_NON       C_LABEL   0
+0234 _00118_DS_               S_main__adc_get  0x00000015 T_NULL   DT_NON       C_LABEL   0
+0235 _00005_DS_               S_main__adc_get  0x00000041 T_NULL   DT_NON       C_LABEL   0
+0236 S_main__DelayMs          S_main__DelayMs  0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 46
+       number of relocations  = 17
+       number of line numbers = 23
+0238 _DelayMs                 S_main__DelayMs  0x00000000 T_NULL   DT_NON       C_EXT     0
+0239 _00110_DS_               S_main__DelayMs  0x00000004 T_NULL   DT_NON       C_LABEL   0
+0240 _00113_DS_               S_main__DelayMs  0x00000016 T_NULL   DT_NON       C_LABEL   0
+0241 S_main__DelayUs2x        S_main__DelayUs2x 0x00000000 T_NULL   DT_NON       C_SECTION 1
+       length                 = 20
+       number of relocations  = 8
+       number of line numbers = 10
+0243 _DelayUs2x               S_main__DelayUs2x 0x00000000 T_NULL   DT_NON       C_EXT     0
+0244 _00105_DS_               S_main__DelayUs2x 0x00000002 T_NULL   DT_NON       C_LABEL   0
+0245 .eof                     DEBUG            0x00000000 T_NULL   DT_NON       C_EOF     0
+

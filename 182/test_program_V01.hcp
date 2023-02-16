@@ -1,0 +1,59 @@
+[Project]
+Project=HC-ICE
+[File Count]
+Count=4
+[Project Files]
+File0=HOLYCHIP_DEFINE.H
+File1=inital.c
+File2=inital.h
+File3=main.c
+File4=main.c
+File5=main.c
+File6=subroutine.c
+File7=subroutine.h
+[Settings]
+Device=HC18P110L
+ConfigBitValue0=11504
+ConfigBitValue1=8192
+ConfigBitValue2=16
+Output=.
+PostBuild=0
+PostBuildCommand=
+ConfigBitValue3=240
+Library=
+[Files]
+File0=main.c|3 75 1030 75 380
+File1=inital.c|1 50 650 50 373
+File2=inital.h|1 75 675 75 398
+File3=HOLYCHIP_DEFINE.H|1 125 725 125 448
+File4=ADC.H|1 100 700 100 423
+File5=adc.c|1 25 625 25 348
+File6=C:\USERS\GONG_CHENG\DESKTOP\C±‡“Î∆˜≤‚ ‘\HC18P235L≤‚ ‘\HC18P235L–æ∆¨Cª∑æ≥≤‚ ‘\HC18P23XL_TEST_AD_PROGRAM\MAIN.C|1 25 1009 25 348
+File7=C:\USERS\GONG_CHENG\DESKTOP\C±‡“Î∆˜≤‚ ‘\HC18P235L≤‚ ‘\HC18P235L–æ∆¨Cª∑æ≥≤‚ ‘\HC18P23XL_TEST_AD_PROGRAM\INITAL.C|1 50 1034 50 373
+File8=C:\USERS\GONG_CHENG\DESKTOP\C±‡“Î∆˜≤‚ ‘\HC18P235L≤‚ ‘\HC18P235L–æ∆¨Cª∑æ≥≤‚ ‘\HC18P23XL_TEST_AD_PROGRAM\HOLYCHIP_DEFINE.H|1 75 1059 75 398
+OpenFileCounts=4
+File9=C:\USERS\GONG_CHENG\DESKTOP\C±‡“Î∆˜≤‚ ‘\HC18P235L≤‚ ‘\HC18P235L–æ∆¨Cª∑æ≥≤‚ ‘\HC18P23XL_TEST_AD_PROGRAM\INITAL.H|1 100 1084 100 423
+[Break]
+Count=0
+BP0=3 306 1
+BP1=5 435 1
+BP2=5 33 1
+BP3=5 37 1
+BP4=5 41 1
+[Watch0]
+Count=7
+Watch0=Gear 0
+Watch1=Key_Mode 0
+Watch2=Time_Seep 0
+Watch3=flag2 0
+Watch4=Red_Flash 0
+Watch5=flag1 0
+Watch6=adc_value 0
+[Watch1]
+Count=0
+[Watch2]
+Count=0
+[MCU]
+PowerSupply=1
+[HC-IDE]
+Version=3.0.9.0
